@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->enum('agama',['Islam','Buddha','Kristen','Protestan','Hindu','Konghucu']);
             $table->string('departemen');
             $table->string('fakultas');
-            $table->integer('no_handphone');
+            $table->string('no_handphone');
             $table->string('email');
             $table->rememberToken();
             $table->timestamps();

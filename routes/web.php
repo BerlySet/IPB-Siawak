@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RecruitmentsController;
+use App\Http\Controllers\RegistrantsController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// CREATE NEW ROUTE FOR NEW URL
+// RECRUITMENT
+Route::get('/recruitments', [RecruitmentsController::class, 'index']);
+Route::get('/recruitments/1', [RegistrantsController::class, 'index']);
+
+// PROFILE
+Route::get('/profile', [UsersController::class, 'index']);
+
+

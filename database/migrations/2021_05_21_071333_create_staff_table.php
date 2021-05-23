@@ -18,10 +18,12 @@ class CreateStaffTable extends Migration
             $table->string('jabatan');
             $table->year('tahun_jabatan');
             $table->boolean('status');
-            $table->unsignedBigInteger('c_idevent');
+            $table->unsignedBigInteger('s_idevent');
+            $table->unsignedBigInteger('s_iddivisi');
             $table->string('s_nim');
             // FK Constraints
-            $table->foreign('c_idevent')->references('id')->on('events');
+            $table->foreign('s_idevent')->references('id')->on('events');
+            $table->foreign('s_iddivisi')->references('id')->on('divisions');
             $table->foreign('s_nim')->references('nim')->on('users');
             $table->timestamps();
         });
