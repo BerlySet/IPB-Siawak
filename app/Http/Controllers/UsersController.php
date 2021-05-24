@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Organization;
+use App\Models\Chairman;
 
 class UsersController extends Controller
 {
@@ -15,10 +16,13 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $user = User::where('nim', 'G64180109')->get(); //NIM diambil dari session pas login
+        $user = User::where('NIM', 'G64180109')->get(); //NIM diambil dari session pas login
         $organization = Organization::where('id', '1')->get(); //ID ormawa diambil dari session pas login
-        dump($user);
-        dump($organization);
+        $chairman = Chairman::where('c_nim', 'G64180109')->get(); //NIM diambil dari session pas login
+        // dump($user);
+        // dump($organization);
+        // dump($chairman);
+        return view('profile', compact('user','organization','chairman'));
     }
 
     /**

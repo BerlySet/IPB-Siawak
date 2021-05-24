@@ -16,9 +16,9 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // CREATE NEW ROUTE FOR NEW URL
 // RECRUITMENT

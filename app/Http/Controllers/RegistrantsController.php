@@ -15,7 +15,7 @@ class RegistrantsController extends Controller
     public function index()
     {
         $registrant = Registrant::where('reg_idrec', '1')->get(); //1 adalah id oprec yang akan di ambil dari klik nantinya
-        dump($registrant);
+        // dump($registrant);
         return view('recruit/detail', compact('registrant'));
     }
 

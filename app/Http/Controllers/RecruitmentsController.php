@@ -17,7 +17,7 @@ class RecruitmentsController extends Controller
     public function index()
     {
         $recruitment = Recruitment::where('rec_idormawa', '1')->get(); //1 adalah id ormawa yang akan disimpan di session nantinya
-        dump($recruitment);
+        // dump($recruitment);
         return view('recruit/recruitments', compact('recruitment'));
     }
 
