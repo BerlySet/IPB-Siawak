@@ -2,6 +2,13 @@
 Projek Akhir PSBO
 Kelompok 6 - P2
 
+## Step Before Coding (after git clone)
+1. Nyalakan XAMPP yakni Apache + MySQL
+2. Buat Tabel bernama `ipb-siawak` di dalam PHPMyAdmin
+3. Buka terminal, Jalankan perintah `php artisan migrate` untuk migrasi seluruh table database
+4. Jalankan perintah `php artisan db:seed` untuk mengisi data dummy ke database
+5. Nyalakan develompment server dengan perintah `php artisan serve`
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
