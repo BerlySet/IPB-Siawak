@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
+use App\Models\SSO;
 use App\Models\User;
 use App\Models\Organization;
 use App\Models\Event;
@@ -36,6 +37,7 @@ class DatabaseSeeder extends Seeder
                 'fakultas' => 'Matematika dan Ilmu Pengetahuan Alam',
                 'no_handphone' => '089599998888',
                 'email' => 'rapi@apps.ipb.ac.id',
+                'password' => bcrypt('12345'),
             ],
             [
                 'nim' => 'H64180072',
@@ -48,7 +50,8 @@ class DatabaseSeeder extends Seeder
                 'departemen' => 'SKPM',
                 'fakultas' => 'Ekologi Manusia',
                 'no_handphone' => '081212341234',
-                'email' => 'akmal@apps.ipb.ac.id',
+                'email' => 'arraz@apps.ipb.ac.id',
+                'password' => bcrypt('12345'),
             ],
             [
                 'nim' => 'H64180002',
@@ -62,6 +65,7 @@ class DatabaseSeeder extends Seeder
                 'fakultas' => 'Ekonomi dan Manajemen',
                 'no_handphone' => '081299997755',
                 'email' => 'berly@apps.ipb.ac.id',
+                'password' => bcrypt('12345'),
             ],
             [
                 'nim' => 'K64180086',
@@ -75,6 +79,7 @@ class DatabaseSeeder extends Seeder
                 'fakultas' => 'Matematika dan Ilmu Pengetahuan Alam',
                 'no_handphone' => '087755443322',
                 'email' => 'ebuy@apps.ipb.ac.id',
+                'password' => bcrypt('12345'),
             ]
         ];
         foreach ($user as $key => $value) {

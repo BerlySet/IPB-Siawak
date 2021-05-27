@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Your Profile</title>
   </head>
   <body>
     <h1 class="mt-3">Profile</h1>
@@ -22,7 +22,7 @@
                 <table class="table table-borderless">
                     <tbody>
                       <tr>
-                        <td><h2> {{ $user[0]->nama }} </h2></td>
+                        <td><h2> {{ $user->nama }} </h2></td>
                       </tr>
                       <tr>
                         <td>Ketua {{ $organization[0]->nama_ormawa }}</td>
@@ -48,40 +48,44 @@
                     <table class="table table-borderless">
                         <tbody>
                             <tr>
-                                <td><b>Jenis Kelamin</b></td>   
-                                <td>{{ $user[0]->jenis_kelamin }}</td>
+                                <td><b>Jenis Kelamin</b></td>
+                                @if ($user->jenis_kelamin == 0)
+                                    <td>Laki-Laki</td>
+                                @else
+                                    <td>Perempuan</td>
+                                @endif
                             </tr>
                             <tr>
                                 <td><b>Tempat Lahir</b></td>
-                                <td>{{ $user[0]->tempat_lahir}}</td>
+                                <td>{{ $user->tempat_lahir}}</td>
                             </tr>
                             <tr>
                                 <td><b>Tanggal Lahir</b></td>
-                                <td>{{ $user[0]->tanggal_lahir }}</td>
+                                <td>{{ $user->tanggal_lahir }}</td>
                             </tr>
                             <tr>
                                 <td><b>Tahun Masuk</b></td>
-                                <td>{{ $user[0]->tahun_masuk }}</td>
+                                <td>{{ $user->tahun_masuk }}</td>
                             </tr>
                             <tr>
                                 <td><b>Agama</b></td>
-                                <td>{{ $user[0]->agama }}</td>
+                                <td>{{ $user->agama }}</td>
                             </tr>
                             <tr>
                                 <td><b>Departemen</b></td>
-                                <td>{{ $user[0]->departemen }}</td>
+                                <td>{{ $user->departemen }}</td>
                             </tr>
                             <tr>
                                 <td><b>Fakultas</b></td>
-                                <td>{{ $user[0]->fakultas }}</td>
+                                <td>{{ $user->fakultas }}</td>
                             </tr>
                             <tr>
                                 <td><b>No Hp</b></td>
-                                <td>{{ $user[0]->no_handphone }}</td>
+                                <td>{{ $user->no_handphone }}</td>
                             </tr>
                             <tr>
                                 <td><b>Email</b></td>
-                                <td>{{ $user[0]->email }}</td>
+                                <td>{{ $user->email }}</td>
                             </tr>
                         </tbody>
                     </table>

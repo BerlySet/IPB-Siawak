@@ -3,12 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Organization;
-use App\Models\Chairman;
-use Illuminate\Support\Facades\Auth;
 
-class UsersController extends Controller
+class CertificateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,20 +13,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        
-        $user = Auth::user();
-        $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
-        $organization = Organization::where('id', $chairman[0]->c_idormawa)->get(); 
-        
-        // return($chairman);
-        // return($organization);
-        // return($user);
-        return view('profile', compact('user','organization','chairman'));
-    }
-
-    public function dashboard()
-    {
-        return view('dashboard');
+        return view('certificate');
     }
 
     /**
