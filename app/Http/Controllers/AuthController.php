@@ -47,7 +47,7 @@ class AuthController extends Controller
                 return redirect()->intended('dashboard');  
                 // return($isChairman);
             }
-            
+            Auth::logout();
             return redirect('login')->with('error', 'kamu bukan ketua ormawa, hubungi kami jika terjadi kesalahan!');
         }
 
