@@ -3,11 +3,16 @@ Projek Akhir PSBO
 Kelompok 6 - P2
 
 ## Step Before Coding (after git clone)
-1. Nyalakan XAMPP yakni Apache + MySQL
-2. Buat Tabel bernama `ipb-siawak` di dalam PHPMyAdmin
-3. Buka terminal, Jalankan perintah `php artisan migrate` untuk migrasi seluruh table database
-4. Jalankan perintah `php artisan db:seed` untuk mengisi data dummy ke database
-5. Nyalakan develompment server dengan perintah `php artisan serve`
+- Clone your project `git clone https://github.com/BerlySet/PSBO.git`
+- Go to the folder application using `cd` command on your cmd or terminal
+- Run `composer install` on your cmd or terminal
+- Copy .env.example file to .env on the root folder. You can type `copy .env.example .env` if using command prompt Windows or `cp .env.example .env` if using terminal, Ubuntu
+- Open `phpMyAdmin` and create database name `ipb-siawak`
+- Open your .env file and change the database name `(DB_DATABASE)` to `ipb-siawak`, username `(DB_USERNAME)` and password `(DB_PASSWORD)` field correspond to your configuration. By default, the username is root and you can leave the password field empty. (This is for Xampp) By default, the username is root and password is also root. (This is for Lamp or Mamp)
+- Run `php artisan key:generate`
+- Run `php artisan migrate`
+- Run `php artisan db:seed`
+- Run `php artisan serve`
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
