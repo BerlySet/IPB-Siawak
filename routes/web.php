@@ -35,7 +35,10 @@ Route::group(['middleware' => ['auth']], function () {
 
         // RECRUITMENT
         // Route::get('/recruitments', [RecruitmentsController::class, 'index']);
-        // Route::get('/recruitments/{id}', [RegistrantsController::class, 'index']);
+        Route::get('recruitments/completed', [RecruitmentsController::class, 'show_completed'])->name('rec_completed');
+        Route::get('recruitments/running', [RecruitmentsController::class, 'show_running'])->name('rec_running');
+        Route::get('recruitments/upcoming', [RecruitmentsController::class, 'show_upcoming'])->name('rec_upcoming');
+        Route::get('recruitments/canceled', [RecruitmentsController::class, 'show_canceled'])->name('rec_canceled');
         Route::resource('recruitments', RecruitmentsController::class);
 
         // PROFILE
@@ -43,11 +46,13 @@ Route::group(['middleware' => ['auth']], function () {
 
         // CERTIFICATE
         Route::get('/certificate', [CertificateController::class, 'index'])->name('sertif');
+        Route::get('/certificate/new/{certificate}', [CertificateController::class, 'create'])->name('sertif');
         // Route::get('/certificate/new/{id}', [CertificateController::class, 'create'])->name('tambah_sertif');
+
+        // LOG OUT
+        Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     });
 });
-
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 

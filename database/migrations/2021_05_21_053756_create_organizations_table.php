@@ -17,6 +17,7 @@ class CreateOrganizationsTable extends Migration
             $table->id();
             $table->text('nama_ormawa');
             $table->longText('deskripsi_ormawa')->default('Ormawa ini belum menambahkan deskripsi.');
+            $table->string('email_ormawa');
             $table->timestamps();
         });
     }

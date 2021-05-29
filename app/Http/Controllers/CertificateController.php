@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Chairman;
+use App\Models\Event;
 
 class CertificateController extends Controller
 {
@@ -13,7 +16,12 @@ class CertificateController extends Controller
      */
     public function index()
     {
-        return view('certificate');
+        $chairman = Chairman::where('c_nim', Auth::id())->get(); //NIM diambil dari session auth pas login
+        $pastevents = Event::where('e_idormawa', $chairman[0]->c_idormawa)
+        ->where('tahun_akademik', '<', '2020/2021 Semester Genap')
+        ->get(); //NIM diambil dari session auth pas login
+        // return($pastevents);
+        return view('certificate', compact('pastevents'));
     }
 
     /**
@@ -21,9 +29,11 @@ class CertificateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $event = Event::findOrFail($id);
+        // return($events);
+        return view('new_certificate', compact('event'));
     }
 
     /**

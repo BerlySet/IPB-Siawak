@@ -17,6 +17,7 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->text('nama_event');
             $table->enum('kategori', ['Kepengurusan', 'Kepanitiaan']);
+            $table->enum('tahun_akademik', ['2021/2022 Semester Genap', '2021/2022 Semester Ganjil', '2020/2021 Semester Genap', '2020/2021 Semester Ganjil', '2019/2020 Semester Genap', '2019/2020 Semester Ganjil']);
             $table->unsignedBigInteger('e_idormawa');
 
             // FK Constraints

@@ -2,7 +2,7 @@
 Projek Akhir PSBO
 Kelompok 6 - P2
 
-## Step Before Coding (after git clone)
+## Step Before Coding
 - Clone your project `git clone https://github.com/BerlySet/PSBO.git`
 - Go to the folder application using `cd` command on your cmd or terminal
 - Run `composer install` on your cmd or terminal
@@ -13,6 +13,11 @@ Kelompok 6 - P2
 - Run `php artisan migrate`
 - Run `php artisan db:seed`
 - Run `php artisan serve`
+
+## Step If Database or Migration or Seeder Changed
+- Make sure XAMPP apache and MySQL active
+- Run `php artisan migrate:fresh`, Your table in database will be regenerated
+- Run `php artisan db:seed`
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 

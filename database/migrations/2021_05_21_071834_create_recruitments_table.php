@@ -16,7 +16,6 @@ class CreateRecruitmentsTable extends Migration
         Schema::create('recruitments', function (Blueprint $table) {
             $table->id();
             $table->text('judul');
-            $table->enum('tahun_akademik', ['2021/2022 Semester Genap', '2021/2022 Semester Ganjil', '2020/2021 Semester Genap', '2020/2021 Semester Ganjil']);
             $table->longText('kriteria_pendaftar');
             $table->date('start_date'); //TO DO make default current date
             $table->date('end_date');

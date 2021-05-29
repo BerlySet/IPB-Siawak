@@ -8,6 +8,7 @@ use App\Models\Chairman;
 use App\Models\Event;
 use App\Models\Division;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class RecruitmentsController extends Controller
 {
@@ -22,9 +23,72 @@ class RecruitmentsController extends Controller
     {
         $user = Auth::user();
         $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
-        $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)->get(); //1 adalah id ormawa yang akan disimpan di session nantinya
+        $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)->get();
         return view('recruit/recruitments', compact('recruitment'));
-        // return($recruitment);
+    }
+    
+    public function show_running() {
+        $user = Auth::user();
+        $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
+        
+        $datenow = Carbon::now();
+        $datestring = $datenow->toDateString();
+        $currentdate = date('Y-m-d', strtotime($datestring));
+
+        $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)
+                        ->where('start_date','<=', $currentdate)
+                        ->where('end_date','>=', $currentdate)
+                        ->where('is_canceled', '!=', true)
+                        ->get();
+
+        return($recruitment);
+    }
+
+    public function show_completed() {
+        $user = Auth::user();
+        $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
+        
+        $datenow = Carbon::now();
+        $datestring = $datenow->toDateString();
+        $currentdate = date('Y-m-d', strtotime($datestring));
+
+        $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)
+                        ->where('end_date','<=', $currentdate)
+                        ->where('is_canceled', '!=', true)
+                        ->get();
+
+        return($recruitment);
+    }
+
+    public function show_upcoming() {
+        $user = Auth::user();
+        $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
+        
+        $datenow = Carbon::now();
+        $datestring = $datenow->toDateString();
+        $currentdate = date('Y-m-d', strtotime($datestring));
+
+        $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)
+                        ->where('start_date','>=', $currentdate)
+                        ->where('is_canceled', '!=', true)
+                        ->get();
+
+        return($recruitment);
+    }
+
+    public function show_canceled() {
+        $user = Auth::user();
+        $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
+        
+        $datenow = Carbon::now();
+        $datestring = $datenow->toDateString();
+        $currentdate = date('Y-m-d', strtotime($datestring));
+
+        $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)
+                        ->where('is_canceled', '=', true)
+                        ->get();
+
+        return($recruitment);
     }
 
     /**

@@ -90,10 +90,12 @@ class DatabaseSeeder extends Seeder
             [
                 'nama_ormawa' => 'BEM Keluarga Mahasiswa IPB',
                 'deskripsi_ormawa' => 'BEM KM IPB adalah badan eksekutif setingkat IPB yang bertujuan untuk mengawal aspirasi seluruh keluarga mahasiswa Institut Pertanian Bogor',
+                'email_ormawa' => 'bemkm@apps.ipb.ac.id'
             ],
             [
                 'nama_ormawa' => 'Himalkom IPB',
                 'deskripsi_ormawa' => 'Himpunan yang mewadahi mahasiswa Ilmu Komputer IPB sebagai pengembangan softskill dan hardskill mahasiswa',
+                'email_ormawa' => 'himalkom@apps.ipb.ac.id'
             ]
         ];
         foreach ($organization as $key => $value) {
@@ -104,13 +106,45 @@ class DatabaseSeeder extends Seeder
             [
                 'nama_event' => 'IT TODAY 2020',
                 'kategori' => 'Kepanitiaan',
+                'tahun_akademik' => '2020/2021 Semester Ganjil',
                 'e_idormawa' => 2,
             ],
             [
                 'nama_event' => 'Staff 2020-2021',
                 'kategori' => 'Kepengurusan',
+                'tahun_akademik' => '2020/2021 Semester Genap',
                 'e_idormawa' => 1,
-            ]
+            ],
+            [
+                'nama_event' => 'Vision 2020',
+                'kategori' => 'Kepanitiaan',
+                'tahun_akademik' => '2020/2021 Semester Ganjil',
+                'e_idormawa' => 1,
+            ],
+            [
+                'nama_event' => 'Vision 2021',
+                'kategori' => 'Kepanitiaan',
+                'tahun_akademik' => '2021/2022 Semester Ganjil',
+                'e_idormawa' => 1,
+            ],
+            [
+                'nama_event' => 'Beyond 2021',
+                'kategori' => 'Kepanitiaan',
+                'tahun_akademik' => '2020/2021 Semester Genap',
+                'e_idormawa' => 1,
+            ],
+            [
+                'nama_event' => 'Staff 2021-2022',
+                'kategori' => 'Kepengurusan',
+                'tahun_akademik' => '2021/2022 Semester Genap',
+                'e_idormawa' => 1,
+            ],
+            [
+                'nama_event' => 'Staff 2019-2020',
+                'kategori' => 'Kepengurusan',
+                'tahun_akademik' => '2019/2020 Semester Genap',
+                'e_idormawa' => 1,
+            ],
         ];
         foreach ($event as $key => $value) {
             Event::create($value);
@@ -203,10 +237,9 @@ class DatabaseSeeder extends Seeder
         $recruitment = [
             [
                 'judul' => 'Oprec Staff IT TODAY 2020',
-                'tahun_akademik' => '2020/2021 Semester Genap',
                 'kriteria_pendaftar' => '1. Mahasiswa IPB angkatan 56-57
-                                        2. Departemen Ilmu Komputer
-                                        3. Bertanggung jawab penuh sampai selesai.',
+                2. Departemen Ilmu Komputer
+                3. Bertanggung jawab penuh sampai selesai.',
                 'start_date' => Carbon::create('2021', '05', '25'),
                 'end_date' => Carbon::create('2021', '06', '15'),
                 'is_canceled' => false,
@@ -215,15 +248,91 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'judul' => 'Staff Recruitment 2020-2021',
-                'tahun_akademik' => '2020/2021 Semester Genap',
-                'kriteria_pendaftar' => '1. Mahasiswa IPB angkatan 55-58
-                                        2. Berkomitmen tinggi
-                                        3. Bertanggung jawab penuh sampai selesai.',
-                'start_date' => Carbon::create('2021', '06', '01'),
+                'kriteria_pendaftar' => '1. Mahasiswa IPB angkatan 56-57
+                2. Departemen Ilmu Komputer
+                3. Bertanggung jawab penuh sampai selesai.',
+                'start_date' => Carbon::create('2021', '05', '01'),
                 'end_date' => Carbon::create('2021', '06', '15'),
                 'is_canceled' => false,
                 'rec_idormawa' => 1,
                 'rec_idevent' => 2,
+            ],
+            [
+                'judul' => 'Oprec Vision 2020',
+                'kriteria_pendaftar' => '1. Mahasiswa IPB angkatan 56-57
+                2. Departemen Ilmu Komputer
+                3. Bertanggung jawab penuh sampai selesai.',
+                'start_date' => Carbon::create('2020', '07', '01'),
+                'end_date' => Carbon::create('2020', '07', '15'),
+                'is_canceled' => false,
+                'rec_idormawa' => 1,
+                'rec_idevent' => 3,
+            ],
+            [
+                'judul' => 'Oprec Vision 2021',
+                'kriteria_pendaftar' => '1. Mahasiswa IPB angkatan 56-57
+                2. Departemen Ilmu Komputer
+                3. Bertanggung jawab penuh sampai selesai.',
+                'start_date' => Carbon::create('2021', '05', '01'),
+                'end_date' => Carbon::create('2021', '05', '15'),
+                'is_canceled' => false,
+                'rec_idormawa' => 1,
+                'rec_idevent' => 4,
+            ],
+            [
+                'judul' => 'Oprec Vision 2021',
+                'kriteria_pendaftar' => '1. Mahasiswa IPB angkatan 56-57
+                2. Departemen Ilmu Komputer
+                3. Bertanggung jawab penuh sampai selesai.',
+                'start_date' => Carbon::create('2021', '04', '01'),
+                'end_date' => Carbon::create('2021', '04', '15'),
+                'is_canceled' => true,
+                'rec_idormawa' => 1,
+                'rec_idevent' => 4,
+            ],
+            [
+                'judul' => 'Oprec Beyond 2021',
+                'kriteria_pendaftar' => '1. Mahasiswa IPB angkatan 56-57
+                2. Departemen Ilmu Komputer
+                3. Bertanggung jawab penuh sampai selesai.',
+                'start_date' => Carbon::create('2021', '05', '20'),
+                'end_date' => Carbon::create('2021', '06', '31'),
+                'is_canceled' => false,
+                'rec_idormawa' => 1,
+                'rec_idevent' => 5,
+            ],
+            [
+                'judul' => 'Staff Recruitment 2019-2020',
+                'kriteria_pendaftar' => '1. Mahasiswa IPB angkatan 56-57
+                2. Departemen Ilmu Komputer
+                3. Bertanggung jawab penuh sampai selesai.',
+                'start_date' => Carbon::create('2020', '11', '01'),
+                'end_date' => Carbon::create('2020', '11', '15'),
+                'is_canceled' => false,
+                'rec_idormawa' => 1,
+                'rec_idevent' => 7,
+            ],
+            [
+                'judul' => 'Staff Recruitment 2021-2022',
+                'kriteria_pendaftar' => '1. Mahasiswa IPB angkatan 56-57
+                2. Departemen Ilmu Komputer
+                3. Bertanggung jawab penuh sampai selesai.',
+                'start_date' => Carbon::create('2021', '11', '01'),
+                'end_date' => Carbon::create('2021', '11', '15'),
+                'is_canceled' => false,
+                'rec_idormawa' => 1,
+                'rec_idevent' => 6,
+            ],
+            [
+                'judul' => 'Oprec Vision 2021 Part 2',
+                'kriteria_pendaftar' => '1. Mahasiswa IPB angkatan 56-57
+                2. Departemen Ilmu Komputer
+                3. Bertanggung jawab penuh sampai selesai.',
+                'start_date' => Carbon::create('2021', '11', '01'),
+                'end_date' => Carbon::create('2021', '11', '15'),
+                'is_canceled' => false,
+                'rec_idormawa' => 1,
+                'rec_idevent' => 4,
             ]
         ];
         foreach ($recruitment as $key => $value) {
