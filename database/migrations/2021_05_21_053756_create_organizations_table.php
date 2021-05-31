@@ -16,7 +16,7 @@ class CreateOrganizationsTable extends Migration
         Schema::create('organizations', function (Blueprint $table) {
             $table->id();
             $table->text('nama_ormawa');
-            $table->longText('deskripsi_ormawa')->default('Ormawa ini belum menambahkan deskripsi.');
+            $table->longText('deskripsi_ormawa');
             $table->string('email_ormawa');
             $table->timestamps();
         });
