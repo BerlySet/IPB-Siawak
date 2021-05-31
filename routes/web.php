@@ -22,6 +22,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/template', function () {
+    return view('main');
+});
 // CREATE NEW ROUTE FOR NEW URL
 
 // AUTH
