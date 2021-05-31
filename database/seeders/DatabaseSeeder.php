@@ -228,7 +228,31 @@ class DatabaseSeeder extends Seeder
                 's_idevent' => 2,
                 's_iddivisi' => 4,
                 's_nim' => 'K64180086',
-            ]
+            ],
+            [
+                'jabatan' => 'Ketua Divisi',
+                'tahun_jabatan' => 2020,
+                'status' => 1,
+                's_idevent' => 7,
+                's_iddivisi' => 9,
+                's_nim' => 'H64180002',
+            ],
+            [
+                'jabatan' => 'Staff',
+                'tahun_jabatan' => 2020,
+                'status' => 0,
+                's_idevent' => 7,
+                's_iddivisi' => 4,
+                's_nim' => 'K64180086',
+            ],
+            [
+                'jabatan' => 'Staff',
+                'tahun_jabatan' => 2020,
+                'status' => 1,
+                's_idevent' => 7,
+                's_iddivisi' => 4,
+                's_nim' => 'K64180086',
+            ],
         ];
         foreach ($staff as $key => $value) {
             Staff::create($value);

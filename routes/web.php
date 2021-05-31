@@ -46,7 +46,9 @@ Route::group(['middleware' => ['auth']], function () {
 
         // CERTIFICATE
         Route::get('/certificate', [CertificateController::class, 'index'])->name('sertif');
-        Route::get('/certificate/new/{certificate}', [CertificateController::class, 'create'])->name('sertif');
+        Route::get('/certificate/new/{certificate}', [CertificateController::class, 'create'])->name('tambah_sertif');
+        Route::post('/certificate/new/{certificate}', [CertificateController::class, 'store'])->name('simpan_sertif');
+        Route::get('/certificate/api/{certificate}', [CertificateController::class, 'api'])->name('api_sertif');
         // Route::get('/certificate/new/{id}', [CertificateController::class, 'create'])->name('tambah_sertif');
 
         // LOG OUT
