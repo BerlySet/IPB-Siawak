@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/template', function () {
-    return view('main');
+    return view('template.main');
 });
 // CREATE NEW ROUTE FOR NEW URL
 
