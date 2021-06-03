@@ -62,6 +62,41 @@ IPB Siawak (Sistem Informasi Anggota Ormawa dan Kepanitiaan) adalah sebuah siste
     Mahasiswa bisa melihat ormawa / kepanitiaan mana yang sedang membuka open recruitment dan mereka cocok dengan kriterianya. 
     Mahasiswa yang ingin melamar tidak perlu lagi data data umum lagi,  jadi tinggal mengisi data dan syarat” tambahan saja.
     Ketua ormawa / kepanitiaan bisa melihat siapa saja pendaftarnya dan kemudian dapat memilih menerima atau menolak calon pendaftar tersebut.
+    
+## Spesifikasi teknis lingkungan pengembangan
+[`^ Kembali Keatas ^`](#)
+  * Software
+  * Hardware
+  * Tech Stack
+ 
+## Konsep OOP yang digunakan
+[`^ Kembali Keatas ^`](#)   
+
+
+## Tipe desain pengembangan yang digunakan (Pattern/Anti Pattern)
+[`^ Kembali Keatas ^`](#)      
+
+
+## Hasil dan pembahasan
+[`^ Kembali Keatas ^`](#)
+  * Use case diagram 
+  * Activity diagram 
+  * Class diagram 
+  * Entity Relationship Diagram 
+  * Arsitektur sistem 
+  * Fungsi utama yang dikembangkan
+  * Fungsi CRUD
+
+## Hasil implementasi
+[`^ Kembali Keatas ^`](#)
+  * Screenshot sistem 
+  * Link aplikasi (jika sudah di deploy)
+
+## Saran untuk pengembangan selanjutnya
+[`^ Kembali Keatas ^`](#)   
+
+## Developer dan job desc
+[`^ Kembali Keatas ^`](#)
 
 
 
