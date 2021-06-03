@@ -10,6 +10,7 @@ use App\Models\Certificate;
 use App\Models\Softskill;
 use App\Models\Staff;
 use App\Models\Division;
+use App\Models\User;
 
 class CertificateController extends Controller
 {
@@ -25,10 +26,12 @@ class CertificateController extends Controller
         ->where('tahun_akademik', '<', '2020/2021 Semester Genap')
         ->get(); //2020/2021 Semester Genap diambil dari tahun akademik sekarang
 
+        $user = Auth::user();
+
         $certificates = Certificate::all();
         $check = 0;
 
-        return view('certificate', compact('pastevents', 'certificates', 'check'));
+        return view('certificate', compact('pastevents', 'certificates', 'check', 'user'));
     }
 
     public function api($id) {
@@ -78,9 +81,11 @@ class CertificateController extends Controller
      */
     public function create($id)
     {
+        $user = Auth::user();
+
         $event = Event::findOrFail($id);
         // return($events);
-        return view('new_certificate', compact('event'));
+        return view('new_certificate', compact('event', 'user'));
     }
 
     /**
