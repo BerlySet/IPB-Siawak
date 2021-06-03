@@ -1,9 +1,9 @@
 <div align="center">
- <h1>Sistem Informasi Anggota Ormawa dan Kepanitiaan (SIAWAK)</h1>
+ <h1>IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan)</h1>
  <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Bogor_Agricultural_University_%28IPB%29_symbol.svg" width=250px>
  <br>
  <b>Pengembangan Sistem Berorientasi Objek (KOM334)<br>
- Kelompok 11 Praktikum 2</b>
+ Kelompok 6 Praktikum 2</b>
  <br><br>
  <b> Asisten Praktikum: </b> <br>
  1. Kak Indah Puspita <br>
@@ -48,6 +48,21 @@
     </tr>
   </table>
 </div>
+
+
+## Deskripsi singkat aplikasi
+[`^ Kembali Keatas ^`](#)
+
+IPB Siawak (Sistem Informasi Anggota Ormawa dan Kepanitiaan) adalah sebuah sistem informasi perekrutan anggota ormawa atau kepanitiaan yang terintegrasi dengan Simak, Simawa dan Simormawa.
+
+## User analysis
+[`^ Kembali Keatas ^`](#)
+  * User story
+    Ketua ormawa / kepanitiaan bisa memposting open recruitment mereka dan mengatur kriteria mahasiswa yang dapat melamar.
+    Mahasiswa bisa melihat ormawa / kepanitiaan mana yang sedang membuka open recruitment dan mereka cocok dengan kriterianya. 
+    Mahasiswa yang ingin melamar tidak perlu lagi data data umum lagi,  jadi tinggal mengisi data dan syarat” tambahan saja.
+    Ketua ormawa / kepanitiaan bisa melihat siapa saja pendaftarnya dan kemudian dapat memilih menerima atau menolak calon pendaftar tersebut.
+
 
 
 <br><br><br>
