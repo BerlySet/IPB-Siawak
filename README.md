@@ -58,7 +58,7 @@ IPB Siawak (Sistem Informasi Anggota Ormawa dan Kepanitiaan) adalah sebuah siste
 ## User analysis
 [`^ Kembali Keatas ^`](#)
    #### User story
-    * Saya sebagai ketua ormawa/kepanitiaan, saya membutuhkan sistem yang bisa diakses mahasiswa lain untuk penerimaan keanggotaan ormawa agar saya tidak menginput anggota satu persatu.
+* Saya sebagai ketua ormawa/kepanitiaan, saya membutuhkan sistem yang bisa diakses mahasiswa lain untuk penerimaan keanggotaan ormawa agar saya tidak menginput anggota satu persatu.
     * Saya sebagai ketua ormawa/kepanitiaan bisa memposting open recruitment mereka dan mengatur kriteria mahasiswa yang dapat melamar.
     * Saya sebagai ketua ormawa/kepanitiaan bisa melihat siapa saja pendaftar dan kemudian dapat memilih menerima atau menolak calon pendaftar tersebut.
     * Saya sebagai mahasiswa bisa melihat ormawa / kepanitiaan mana yang sedang membuka open recruitment dan mereka cocok dengan kriteria saya.
