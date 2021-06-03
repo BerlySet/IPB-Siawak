@@ -31,13 +31,13 @@
     <tr>
       <td>3</td>
       <td>Arrazaq Adrian</td>
-      <td>G641800109</td>
+      <td>G64180109</td>
       <td>Project Manager</td>
     </tr>
     <tr>
       <td>4</td>
       <td>Yudha Berliandi</td>
-      <td>G641800110</td>
+      <td>G64180110</td>
       <td>Frontend Developer</td>
     </tr>
     <tr>
