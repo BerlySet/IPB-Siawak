@@ -136,7 +136,7 @@
     <hr>
     <div class="dropdown">
       <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://github.com/BerlySet.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <svg class="bi me-2" width="32" height="32"><use xlink:href="#people-circle"/></svg>
         <strong>@yield('user')</strong>
       </a>
       <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
