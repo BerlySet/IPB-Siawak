@@ -34,6 +34,12 @@ class UsersController extends Controller
         return view('dashboard', compact('user'));
     }
 
+    public function members()
+    {
+        $user = Auth::user();
+        return view('members', compact('user'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
