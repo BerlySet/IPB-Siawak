@@ -1,6 +1,6 @@
 <div align="center">
  <h1>IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan)</h1>
- <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Bogor_Agricultural_University_%28IPB%29_symbol.svg" width=250px>
+ <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Bogor_Agricultural_University_%28IPB%29_symbol.svg" width=200px>
  <br>
  <b>Pengembangan Sistem Berorientasi Objek (KOM334)<br>
  Kelompok 6 Praktikum 2</b>
@@ -30,7 +30,7 @@
     </tr>
     <tr>
       <td>3</td>
-      <td>Arrazaq Adrian</td>
+      <td>Arrazzaq Adrian</td>
       <td>G64180109</td>
       <td>Project Manager</td>
     </tr>
