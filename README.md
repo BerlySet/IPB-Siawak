@@ -105,6 +105,15 @@ IPB Siawak (Sistem Informasi Anggota Ormawa dan Kepanitiaan) adalah sebuah siste
 
 <br><br><br>
 
+# Akun Dummy
+`Akun Ketua`
+Email : arraz@apps.ipb.ac.id / rapi@apps.ipb.ac.id
+Pass : 12345
+
+`Akun Mahasiswa`
+Email : berly@apps.ipb.ac.id / ebuy@apps.ipb.ac.id
+Pass : 12345
+
 # KOM334 - Pengembangan Sistem Berorientasi Objek
 Projek Akhir PSBO
 Kelompok 6 - P2

@@ -60,6 +60,23 @@ Route::group(['middleware' => ['auth']], function () {
         // LOG OUT
         Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     });
+
+    Route::group(['middleware' => ['cek_login_user']], function () {
+        // DASHBOARD
+        Route::get('user/dashboard', [UsersController::class, 'dashboard_user'])->name('user');
+
+        // RECRUITMENT
+        Route::get('user/recruitments', [UsersController::class, 'recruitments_user']);
+
+        // HISTORY
+        Route::get('user/history', [UsersController::class, 'history_user']);
+
+        // PROFILE
+        Route::get('user/profile', [UsersController::class, 'profile_user']);
+
+        // LOG OUT
+        Route::get('user/logout', [AuthController::class, 'logout'])->name('logout');
+    });
 });
 
 

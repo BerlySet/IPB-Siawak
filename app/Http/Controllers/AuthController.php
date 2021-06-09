@@ -12,12 +12,13 @@ class AuthController extends Controller
     public function index()
     {
         if ($user = Auth::user()) {
-            // $isChairman = Chairman::where('c_nim', $user->nim)->get();
+            $isChairman = Chairman::where('c_nim', $user->nim)->get();
 
-            // if (count($isChairman)) {
-            //     return redirect()->intended('dashboard');  
-            // }
-            return redirect()->intended('dashboard');  
+            if (count($isChairman)) {
+                return redirect()->intended('dashboard');  
+            } else {
+                return redirect()->intended('user/dashboard');  
+            }
         }
 
         return view('login');
@@ -46,7 +47,11 @@ class AuthController extends Controller
             if (count($isChairman)) {
                 return redirect()->intended('dashboard');  
                 // return($isChairman);
+            } else {
+                return redirect()->intended('user/dashboard');  
             }
+
+
             Auth::logout();
             return redirect('login')->with('error', 'kamu bukan ketua ormawa, hubungi kami jika terjadi kesalahan!');
         }
