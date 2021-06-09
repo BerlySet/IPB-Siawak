@@ -24,7 +24,7 @@
       <td>2020/2021 Semester Genap</td>
       <td>Kepanitiaan</td>
       <td>
-        <a href="" class="badge badge-success bg-primary">Edit</a>
+        <a href="/members/list" class="badge badge-success bg-primary">Edit</a>
       </td>
       
       <tr>

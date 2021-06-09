@@ -56,6 +56,8 @@ Route::group(['middleware' => ['auth']], function () {
         
         // MEMBERS
         Route::get('/members', [UsersController::class, 'members']);
+        Route::get('/members/edit', [UsersController::class, 'members_edit']);
+        Route::get('/members/list', [UsersController::class, 'members_list']);
 
         // LOG OUT
         Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

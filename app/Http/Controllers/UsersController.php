@@ -45,6 +45,18 @@ class UsersController extends Controller
         $user = Auth::user();
         return view('members', compact('user'));
     }
+
+    public function members_edit()
+    {
+        $user = Auth::user();
+        return view('members_edit', compact('user'));
+    }
+
+    public function members_list()
+    {
+        $user = Auth::user();
+        return view('members_list', compact('user'));
+    }
     
     public function dashboard_user()
     {
