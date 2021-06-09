@@ -24,7 +24,7 @@ class RecruitmentsController extends Controller
         $user = Auth::user();
         $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
         $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)->get();
-        return view('recruit/recruitments', compact('recruitment'));
+        return view('recruit/recruitments', compact('recruitment','user'));
     }
     
     public function show_running() {

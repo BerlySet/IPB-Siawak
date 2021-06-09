@@ -15,4 +15,4 @@
 </div>
 @endsection
 
-
+@section('user', $user->nama )
