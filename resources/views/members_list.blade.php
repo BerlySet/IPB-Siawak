@@ -6,9 +6,15 @@
 <div class="overflow-auto w-100">
   <div class=".d-flex mx-5 my-3">
     <div class="container">
-      <h2 class="container">IT Today 2021</h2>
-      <div class="container">Acara Yang Sedang Berlangsung
+      <h2 class="container">{{ $event[0]->nama_event }}</h2>
+      @if (session('status'))
+      <div class="alert alert-success">
+        {{ session('status') }}
       </div>
+      @endif
+      <div class="container">Seluruh Pengurus
+      </div>
+
       <div class="row justify-content-end px-3 gap-3">
         <a class="btn btn-primary btn-sm col-1 m-1" href="/members/edit/{{ $id }}" role="button">Edit</a>
       </div>
@@ -37,7 +43,7 @@
           <td>{{ $st->jabatan }}</td>
           <td>{{ $st->nama_divisi }}</td>
           <tr>
-          @endforeach
+            @endforeach
 
         </tbody>
       </table>

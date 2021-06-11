@@ -58,8 +58,25 @@ class UsersController extends Controller
         $staff = Staff::where('s_idevent', $id)
         ->join('users', 'staff.s_nim', '=', 'users.nim')
         ->join('divisions', 'staff.s_iddivisi', '=', 'divisions.id')
+        ->select('staff.id', 'staff.jabatan', 'staff.tahun_jabatan', 'staff.status',
+        'users.nim', 'users.nama', 'divisions.nama_divisi')
+        ->orderBy('staff.status', 'desc')
+        ->orderBy('divisions.nama_divisi', 'asc')
+        ->orderBy('staff.jabatan', 'asc')
         ->get();
-        return view('members_edit', compact('user', 'staff', 'id'));
+
+        $availdiv = Division::where('d_idevent', $id)->get();
+
+        $event = Event::where('id', $id)->get();
+
+        $jabatan[0] = 'Ketua';
+        $jabatan[1] = 'Wakil Ketua';
+        $jabatan[2] = 'Sekretaris';
+        $jabatan[3] = 'Bendahara';
+        $jabatan[4] = 'Staff';
+
+        // dump($jabatan);
+        return view('members_edit', compact('user', 'staff', 'id', 'availdiv', 'event', 'jabatan'));
     }
 
     public function members_list($id)
@@ -68,14 +85,23 @@ class UsersController extends Controller
         $staff = Staff::where('s_idevent', $id)
         ->join('users', 'staff.s_nim', '=', 'users.nim')
         ->join('divisions', 'staff.s_iddivisi', '=', 'divisions.id')
+        ->select('staff.id', 'staff.jabatan', 'staff.tahun_jabatan', 'staff.status',
+        'users.nim', 'users.nama', 'divisions.nama_divisi')
+        ->orderBy('staff.status', 'desc')
+        ->orderBy('divisions.nama_divisi', 'asc')
+        ->orderBy('staff.jabatan', 'asc')
         ->get();
+
+        $event = Event::where('id', $id)->get();
         // return($staff);
-        return view('members_list', compact('user', 'staff', 'id'));
+        return view('members_list', compact('user', 'staff', 'id', 'event'));
     }
     
+    //------------------------------ USER MAHASISWA ---------------------------------------------------
     public function dashboard_user()
     {
-        return view('User.dashboard');
+        $user = Auth::user();
+        return view('User.dashboard' , compact('user'));
     }
 
     public function profile_user()
@@ -155,7 +181,30 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return($request);
+
+        for ($i=0; $i < $request->count_members; $i++) {
+
+            $div = Division::where('d_idevent', $request->id_event)
+            ->where('nama_divisi', $request->divisi[$i])->get();
+
+            // dump($div);
+
+            if ($request->isactive[$i] == 'Tidak Aktif') {
+                $status = 0;
+            } else {
+                $status = 1;
+            }
+
+            Staff::where('id', $request->id[$i])
+                ->update([
+                    'jabatan' => $request->posisi[$i],
+                    'status' => $status,
+                    's_iddivisi' => $div[0]->id,
+                ]);
+        }
+
+        return redirect()->route('members_list', ['members' => $request->id_event])->with('status', 'Data Berhasil Diubah!');;
     }
 
     /**

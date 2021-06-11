@@ -58,7 +58,8 @@ Route::group(['middleware' => ['auth']], function () {
         // MEMBERS
         Route::get('/members', [UsersController::class, 'members']);
         Route::get('/members/edit/{members}', [UsersController::class, 'members_edit']);
-        Route::get('/members/list/{members}', [UsersController::class, 'members_list']);
+        Route::post('/members/edit/{members}', [UsersController::class, 'store']);
+        Route::get('/members/list/{members}', [UsersController::class, 'members_list'])->name('members_list');
 
         // LOG OUT
         Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
