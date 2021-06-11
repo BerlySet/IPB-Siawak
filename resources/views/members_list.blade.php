@@ -3,37 +3,49 @@
 @section('title', 'Members')
 
 @section('container')
-<div class="container">
-<h2 class="container">IT Today 2021</h2>
-  <div class="container">Acara Yang Sedang Berlangsung 
+<div class="overflow-auto w-100">
+  <div class=".d-flex mx-5 my-3">
+    <div class="container">
+      <h2 class="container">IT Today 2021</h2>
+      <div class="container">Acara Yang Sedang Berlangsung
+      </div>
+      <div class="row justify-content-end px-3 gap-3">
+        <a class="btn btn-primary btn-sm col-1 m-1" href="/members/edit/{{ $id }}" role="button">Edit</a>
+      </div>
+      <table class="table">
+        <thead class="table-info">
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Status</th>
+            <th scope="col">Posisi</th>
+            <th scope="col">Divisi</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+          @foreach ($staff as $st)
+          </tr>
+          <th scope="row">{{ $loop->iteration }}</th>
+          <td>{{ $st->nama }}</td>
+          @if ($st->status == 0)
+          <td>Tidak Aktif</td>
+          @else
+          <td>Aktif</td>
+          @endif
+          <td>{{ $st->jabatan }}</td>
+          <td>{{ $st->nama_divisi }}</td>
+          <tr>
+          @endforeach
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="b-example-divider"></div>
   </div>
-  <div class="row justify-content-end px-3 gap-3">
-    <a class="btn btn-primary btn-sm col-1" href="/members/edit" role="button">Edit</a>
-  </div>
-  <table class="table">
-    <thead class="table-info">
-      <tr>
-        <th scope="col">No.</th>
-        <th scope="col">Nama</th>
-        <th scope="col">Status</th>
-        <th scope="col">Posisi</th>
-        <th scope="col">Divisi</th>
-        
-      </tr>
-    </thead>
-    <tbody>
-      </tr>
-      <th scope="row">1</th>
-      <td>Cristmas Anggario</td>
-      <td>Active</td>
-      <td>Staff</td>
-      <td>Liaison Officer</td>
-      <tr>
-    </tbody>
-</table>
 </div>
-  
-  <div class="b-example-divider"></div>
 @endsection
 
 @section('user', $user->nama )

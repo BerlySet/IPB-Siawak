@@ -30,7 +30,7 @@ class CertificateController extends Controller
 
         $certificates = Certificate::all();
         $check = 0;
-
+        // return($pastevents);
         return view('certificate', compact('pastevents', 'certificates', 'check', 'user'));
     }
 

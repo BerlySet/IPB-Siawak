@@ -32,6 +32,7 @@ Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/proses_login', [AuthController::class, 'proses_login'])->name('proses_login');
 
 Route::group(['middleware' => ['auth']], function () {
+    // LOGIN KETUA
     Route::group(['middleware' => ['cek_login']], function () {
         // DASHBOARD
         Route::get('/dashboard', [UsersController::class, 'dashboard'])->name('chairman');
@@ -56,13 +57,13 @@ Route::group(['middleware' => ['auth']], function () {
         
         // MEMBERS
         Route::get('/members', [UsersController::class, 'members']);
-        Route::get('/members/edit', [UsersController::class, 'members_edit']);
-        Route::get('/members/list', [UsersController::class, 'members_list']);
+        Route::get('/members/edit/{members}', [UsersController::class, 'members_edit']);
+        Route::get('/members/list/{members}', [UsersController::class, 'members_list']);
 
         // LOG OUT
         Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     });
-
+    // LOGIN MAHASISWA
     Route::group(['middleware' => ['cek_login_user']], function () {
         // DASHBOARD
         Route::get('user/dashboard', [UsersController::class, 'dashboard_user'])->name('user');

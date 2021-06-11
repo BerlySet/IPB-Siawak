@@ -43,19 +43,34 @@ class UsersController extends Controller
     public function members()
     {
         $user = Auth::user();
-        return view('members', compact('user'));
+        $chairman = Chairman::where('c_nim', Auth::id())->get(); //NIM diambil dari session auth pas login
+        $runningevent = Event::where('e_idormawa', $chairman[0]->c_idormawa)
+        ->where('tahun_akademik', '>=', '2020/2021 Semester Genap')
+        ->orderBy('tahun_akademik', 'desc')
+        ->get(); //2020/2021 Semester Genap diambil dari tahun akademik sekarang
+        // return($runningevent);
+        return view('members', compact('user', 'runningevent'));
     }
 
-    public function members_edit()
+    public function members_edit($id)
     {
         $user = Auth::user();
-        return view('members_edit', compact('user'));
+        $staff = Staff::where('s_idevent', $id)
+        ->join('users', 'staff.s_nim', '=', 'users.nim')
+        ->join('divisions', 'staff.s_iddivisi', '=', 'divisions.id')
+        ->get();
+        return view('members_edit', compact('user', 'staff', 'id'));
     }
 
-    public function members_list()
+    public function members_list($id)
     {
         $user = Auth::user();
-        return view('members_list', compact('user'));
+        $staff = Staff::where('s_idevent', $id)
+        ->join('users', 'staff.s_nim', '=', 'users.nim')
+        ->join('divisions', 'staff.s_iddivisi', '=', 'divisions.id')
+        ->get();
+        // return($staff);
+        return view('members_list', compact('user', 'staff', 'id'));
     }
     
     public function dashboard_user()
