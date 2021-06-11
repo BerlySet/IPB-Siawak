@@ -15,6 +15,10 @@
       <div class="container">Seluruh Pengurus
       </div>
 
+      @if (count($staff)==0)
+      <img src="{{ asset('images/empty.png') }}" class="rounded mx-auto mt-5 d-block" height="200" width="200" alt="tidak ada pengurus">
+      <p class="text-center m-3">Kamu belum memiliki pengurus untuk event ini.</p>
+      @else
       <div class="row justify-content-end px-3 gap-3">
         <a class="btn btn-primary btn-sm col-1 m-1" href="/members/edit/{{ $id }}" role="button">Edit</a>
       </div>
@@ -47,6 +51,7 @@
 
         </tbody>
       </table>
+      @endif
     </div>
 
     <div class="b-example-divider"></div>
