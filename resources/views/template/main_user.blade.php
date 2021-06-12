@@ -103,25 +103,25 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="./dashboard" class="nav-link text-white" aria-current="page">
+        <a href="{{ url('/user/dashboard') }}" class="nav-link text-white" aria-current="page">
           <svg class="bi me-2 " width="16" height="16"><use xlink:href="#home"/></svg>
           Dashboard
         </a>
       </li>
       <li>
-        <a href="./recruitments" class="nav-link text-white">
+        <a href="{{ url('/user/recruitments') }}" class="nav-link text-white">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
           Open Recruitment 
         </a>
       </li>
       <li>
-        <a href="./history" class="nav-link text-white">
+        <a href="{{ url('/user/history') }}" class="nav-link text-white">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#toggles2"/></svg>
           History 
         </a>
       </li>
       <li>
-        <a href="./profile" class="nav-link text-white">
+        <a href="{{ url('/user/profile') }}" class="nav-link text-white">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
           Profile
         </a>

@@ -253,6 +253,30 @@ class DatabaseSeeder extends Seeder
                 's_iddivisi' => 4,
                 's_nim' => 'K64180086',
             ],
+            [
+                'jabatan' => 'Staff',
+                'tahun_jabatan' => 2020,
+                'status' => 1,
+                's_idevent' => 2,
+                's_iddivisi' => 6,
+                's_nim' => 'H64180002',
+            ],
+            [
+                'jabatan' => 'Staff',
+                'tahun_jabatan' => 2020,
+                'status' => 1,
+                's_idevent' => 2,
+                's_iddivisi' => 3,
+                's_nim' => 'K64180086',
+            ],
+            [
+                'jabatan' => 'Sekretaris',
+                'tahun_jabatan' => 2020,
+                'status' => 1,
+                's_idevent' => 2,
+                's_iddivisi' => 4,
+                's_nim' => 'G64180072',
+            ],
         ];
         foreach ($staff as $key => $value) {
             Staff::create($value);
@@ -366,20 +390,30 @@ class DatabaseSeeder extends Seeder
         $registrant = [
             [
                 'divisi_1' => 8,
-                'alasan_divisi_1' => 'Saya suka divisi ini',
                 'divisi_2' => 9,
-                'alasan_divisi_2' => 'Saya berpengalaman pada divisi ini',
                 'reg_idrec' => 1,
                 'reg_nim' => 'H64180002',
             ],
             [
                 'divisi_1' => 1,
-                'alasan_divisi_1' => 'Saya suka divisi ini',
                 'divisi_2' => 4,
-                'alasan_divisi_2' => 'Saya berpengalaman pada divisi ini',
                 'reg_idrec' => 2,
                 'reg_nim' => 'K64180086',
-            ]
+            ],
+            [
+                'divisi_1' => 1,
+                'divisi_2' => 6,
+                'reg_idrec' => 1,
+                'status' => 1,
+                'reg_nim' => 'H64180002',
+            ],
+            [
+                'divisi_1' => 5,
+                'divisi_2' => 3,
+                'reg_idrec' => 5,
+                'status' => 0,
+                'reg_nim' => 'H64180002',
+            ],
         ];
         foreach ($registrant as $key => $value) {
             Registrant::create($value);

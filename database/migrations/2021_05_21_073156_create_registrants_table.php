@@ -16,9 +16,7 @@ class CreateRegistrantsTable extends Migration
         Schema::create('registrants', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('divisi_1');
-            $table->string('alasan_divisi_1');
             $table->unsignedBigInteger('divisi_2');
-            $table->string('alasan_divisi_2');
             $table->boolean('status')->nullable();
             $table->unsignedBigInteger('reg_idrec');
             $table->string('reg_nim');

@@ -7,6 +7,7 @@ use App\Models\Recruitment;
 use App\Models\Chairman;
 use App\Models\Event;
 use App\Models\Division;
+use App\Models\Registrant;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
@@ -262,5 +263,60 @@ class RecruitmentsController extends Controller
     {
         Recruitment::destroy($id);
         return redirect('recruit/recruitments')->with('status', 'Data Berhasil Dihapus!');;
+    }
+
+    #----------------------- USER / CLIENT SIDE -----------------------------------
+    public function daftar_oprec($id)
+    {
+        $user = Auth::user();
+
+        $rec = Recruitment::where('recruitments.id', $id)
+        ->join('organizations', 'recruitments.rec_idormawa', '=', 'organizations.id')
+        ->join('events', 'recruitments.rec_idevent', '=', 'events.id')
+        ->select('recruitments.id', 'recruitments.judul', 'recruitments.kriteria_pendaftar', 'recruitments.start_date',
+        'recruitments.end_date', 'recruitments.is_canceled', 'events.nama_event', 'events.kategori', 'recruitments.rec_idevent',
+        'events.tahun_akademik', 'organizations.nama_ormawa', 'organizations.nama_ormawa', 'recruitments.created_at',  'recruitments.updated_at')
+        ->get();
+        
+
+        $availdiv = Division::where('d_idevent', $rec[0]->rec_idevent)->get();
+        // dump($rec);  
+        // return($availdiv);
+        return view('user/register', compact('user', 'rec', 'availdiv'));
+    }
+
+    public function store_user($id, Request $request)
+    {
+        $user = Auth::user();
+
+        // return($request);
+
+        $request->validate([
+            'nama_event'=>'required',
+            'id_oprec'=>'required',
+            'nama_ormawa'=>'required',
+            'divisi1'=>'required|integer',
+            'divisi2'=>'required|integer|different:divisi1',
+        ],
+    
+        [
+            'nama_event.required'=>'Terjadi Kesalahan',
+            'id_oprec.required'=>'Terjadi Kesalahan',
+            'nama_ormawa.required'=>'Terjadi Kesalahan',
+            'divisi1.required'=>'Kamu Belum Memilih Pilihan Divisi Pertama',
+            'divisi2.required'=>'Kamu Belum Memilih Pilihan Divisi Kedua',
+            'divisi1.integer'=>'Kamu Belum Memilih Pilihan Divisi Pertama',
+            'divisi2.integer'=>'Kamu Belum Memilih Pilihan Divisi Kedua',
+            'divisi2.different'=>'Pilihan Kedua Divisi Harus Berbeda',
+        ]);
+
+        Registrant::create([
+            'divisi_1' => $request->divisi1,
+            'divisi_2' => $request->divisi2,
+            'reg_idrec' => $request->id_oprec,
+            'reg_nim' => Auth::user()->nim,
+        ]);
+
+        return redirect('user/history')->with('status', 'Anda Berhasil Mendaftar, Good Luck!');
     }
 }

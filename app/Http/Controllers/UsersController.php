@@ -125,8 +125,7 @@ class UsersController extends Controller
                     ->join('events', 'recruitments.rec_idevent', '=', 'events.id') 
                     ->join('organizations', 'recruitments.rec_idormawa', '=', 'organizations.id') 
                     ->select('registrants.id', 'events.nama_event', 'events.kategori', 'events.tahun_akademik',
-                    'registrants.divisi_1', 'registrants.alasan_divisi_1', 'registrants.divisi_2', 'registrants.alasan_divisi_2',
-                    'registrants.status', 'registrants.created_at', 'registrants.updated_at', 'organizations.nama_ormawa')
+                    'registrants.divisi_1', 'registrants.divisi_2', 'registrants.status', 'registrants.created_at', 'registrants.updated_at', 'organizations.nama_ormawa')
                     ->orderBy('registrants.created_at', 'asc')
                     ->get();
 
@@ -159,8 +158,11 @@ class UsersController extends Controller
                                 )
                         ->orderBy('recruitments.end_date', 'asc')
                         ->get();
-        // return($recruitment);
-        return view('user.recruitments', compact('user', 'recruitment'));
+
+        $registrant = Registrant::where('reg_nim', Auth::user()->nim)->get();
+        $isregist = 0;
+        // return($registrant);
+        return view('user.recruitments', compact('user', 'recruitment', 'registrant', 'isregist'));
     }
 
     /**

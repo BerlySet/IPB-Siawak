@@ -71,6 +71,8 @@ Route::group(['middleware' => ['auth']], function () {
 
         // RECRUITMENT
         Route::get('user/recruitments', [UsersController::class, 'recruitments_user']);
+        Route::get('user/recruitments/{recruitments}', [RecruitmentsController::class, 'daftar_oprec']);
+        Route::post('user/recruitments/{recruitments}/register', [RecruitmentsController::class, 'store_user']);
 
         // HISTORY
         Route::get('user/history', [UsersController::class, 'history_user']);
