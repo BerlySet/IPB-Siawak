@@ -29,7 +29,7 @@
           <td>{{ $re->tahun_akademik }}</td>
           <td>{{ $re->kategori }}</td>
           <td>
-            <a href="/members/list/{{ $re->id }}" class="btn btn-primary btn-sm">Edit</a>
+            <a href="/members/list/{{ $re->id }}" class="btn btn-primary btn-sm">Detail</a>
           </td>
 
           @endforeach

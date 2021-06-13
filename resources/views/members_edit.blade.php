@@ -32,13 +32,13 @@
             </tr>
             <th scope="row">{{ $loop->iteration }}</th>
             <td>{{ $st->nama }}
-              
+
               <div class="form-group">
                 <input type="hidden" id="id[]" name="id[]" value="{{ $st->id }}">
               </div>
             </td>
             {{-- hidden id --}}
-            
+
             <td>
               <div class="form-group">
                 <select class="form-select @error('isactive') is-invalid @enderror" id="isactive[]" name="isactive[]">
@@ -86,7 +86,26 @@
         </table>
         <div class="row justify-content-end px-3 gap-3">
           <a class="btn btn-danger col-1" href="/members/list/{{$id}}" role="button">Batal</a>
-          <button type="submit" class="btn btn-primary col-1">Simpan</button>
+          <button type="button" class="btn btn-primary col-1" data-bs-toggle="modal" data-bs-target="#membersEditModal">Simpan</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="membersEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Anda yakin ingin mengubah data?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+              </div>
+            </div>
+          </div>
         </div>
       </form>
     </div>

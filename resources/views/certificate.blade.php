@@ -34,16 +34,15 @@
           <td class="col-3">{{ $pe->tahun_akademik }}</td>
           <td class="col-2">{{ $pe->kategori }}</td>
           <td class="col-2">
-            @foreach ($certificates as $certificate)
-            @if ($certificate->ctf_idevent == $pe->id)
-              @php
-              $check = 1;
-              @endphp
-            @else
-              @php
+            @php
               $check = 0;
-              @endphp
-            @endif
+            @endphp
+            @foreach ($certificates as $certificate)
+              @if ($certificate->ctf_idevent == $pe->id)
+                @php
+                $check = 1;
+                @endphp
+              @endif
             @endforeach
 
             @if ($check == 1)

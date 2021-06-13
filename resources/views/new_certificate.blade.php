@@ -166,7 +166,29 @@
 
                     <div class="row justify-content-end px-3 gap-3">
                         <a class="btn btn-danger col-1" href="/certificate" role="button">Batal</a>
-                        <button type="submit" class="btn btn-primary col-2">Kirim Sertifikat</button>
+                        <button type="button" class="btn btn-primary col-2" data-bs-toggle="modal" data-bs-target="#sertifModal">Kirim Sertifikat</button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="sertifModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Apakah anda yakin untuk mengirimkan sertifikat?</p>
+                                    <p><b>Setelah ini Anda tidak dapat mengubah datanya. Mohon pastikan seluruh pengisian sudah benar.</b></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+                                    <button type="submit" class="btn btn-primary">Kirim</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
