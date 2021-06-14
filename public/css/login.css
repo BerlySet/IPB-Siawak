@@ -45,8 +45,12 @@ html,body{
 }
 
 .teksb{
+    position: absolute;
+    top: 103%;
+    width: 100%;
     text-align: center;
-    top: 700px;
+    font-size: 30px;
+    color: white;
     letter-spacing: 2px;
 }
 
@@ -56,10 +60,10 @@ html,body{
 
 .foto{
     position: absolute;
-    width: 600px;
-    height: 600px;
-    left: 500px;
-    top: -100px;
+    width: 812px;
+    height: 408px; 
+    left: 373px;
+    top: 0px;
     background-image: url("fotologin.png");
     background-repeat: no-repeat;
     background-size: cover;

@@ -25,6 +25,9 @@
             <div class="logo"></div>
             <div class="kotak">
                 <div class="foto"></div>
+                    <div class="teksb">
+                        <center><h3>Sistem Informasi Anggota Ormawa dan Kepanitiaan IPB</h3></center>
+                    </div>
                 <div class="scale">
                     <div id="layoutAuthentication">
                         <div id="layoutAuthentication_content">
