@@ -15,7 +15,7 @@
                         <div class="container-fluid">
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
-                                    <a class="nav-link active" aria-current="page" href="/recruitments">All</a>
+                                    <a class="nav-link active" aria-current="page" href="/recruitments"><b>All</b></a>
                                     <a class="nav-link" href="/recruitments/completed">Completed</a>
                                     <a class="nav-link" href="/recruitments/running">Running</a>
                                     <a class="nav-link" href="/recruitments/upcoming">Upcoming</a>

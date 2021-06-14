@@ -19,7 +19,7 @@
                                     <a class="nav-link" href="/recruitments/completed">Completed</a>
                                     <a class="nav-link" href="/recruitments/running">Running</a>
                                     <a class="nav-link" href="/recruitments/upcoming">Upcoming</a>
-                                    <a class="nav-link active" aria-current="page" href="/recruitments/canceled">Canceled</a>
+                                    <a class="nav-link active" aria-current="page" href="/recruitments/canceled"><b>Canceled</b></a>
                                 </div>
                             </div>
                         </div>
