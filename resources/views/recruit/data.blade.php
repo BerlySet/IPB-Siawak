@@ -29,9 +29,9 @@
                             <td>Divis Eksternal</td>
                             <td>Divis HRD</td>
                             <td>
-                            <button type="button" class="btn btn-success btn-sm">Terima</button>
-                            <button type="button" class="btn btn-danger btn-sm">Tolak</button>
-                            <button type="button" class="btn btn-primary btn-sm">Detail</button>
+                            <button type="button" class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></button>
+                            <button type="button" class="btn btn-danger btn-sm"><i class='fas fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
+                            <button type="button" class="btn btn-primary btn-sm"><i class='fas fa-search' style='font-size:24px;color:white'></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -41,9 +41,9 @@
                             <td>Divis HRD</td>
                             <td>Divis Eksternal</td>
                             <td>
-                            <button type="button" class="btn btn-success btn-sm">Terima</button>
-                            <button type="button" class="btn btn-danger btn-sm">Tolak</button>
-                            <button type="button" class="btn btn-primary btn-sm">Detail</button>
+                            <button type="button" class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></button>
+                            <button type="button" class="btn btn-danger btn-sm"><i class='fas fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
+                            <button type="button" class="btn btn-primary btn-sm"><i class='fas fa-search' style='font-size:24px;color:white'></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -53,20 +53,16 @@
                             <td>Divis Bongkar</td>
                             <td>Divis Pasang</td>
                             <td>
-                            <button type="button" class="btn btn-success btn-sm">Terima</button>
-                            <button type="button" class="btn btn-danger btn-sm">Tolak</button>
-                            <button type="button" class="btn btn-primary btn-sm">Detail</button>
+                            <button type="button" class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></button>
+                            <button type="button" class="btn btn-danger btn-sm"><i class='fas fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
+                            <button type="button" class="btn btn-primary btn-sm"><i class='fas fa-search' style='font-size:24px;color:white'></i></button>
                             </td>
                         </tr>
 
                     </tbody>
                 </table>
 
-                <div style = "position:relative; left: 350px;">
-                    <a href="#" class="btn btn-danger">Tolak</a>
-                    <a href="#" class="btn btn-success">Terima</a>
-                </div>
-
+                <div class="container">Tentukanlah penerimaan dengan teliti</div>
         <div class="b-example-divider"></div>
     </div>
 </div>
