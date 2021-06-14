@@ -25,6 +25,23 @@ class RecruitmentsController extends Controller
         $user = Auth::user();
         $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
         $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)->get();
+        $datenow = Carbon::now();
+        $datenow = $datenow->toDateString();
+
+        for ($i=0; $i < count($recruitment); $i++) { 
+            if ( $recruitment[$i]->is_canceled == 1 ) {
+                $recruitment[$i]->status = 'Canceled';
+            } else if ( $recruitment[$i]->start_date <= $datenow && $recruitment[$i]->end_date >= $datenow ) {
+                $recruitment[$i]->status = 'Running';
+            } else if ( $recruitment[$i]->start_date > $datenow ) {
+                $recruitment[$i]->status = 'Upcoming';
+            } else if ( $recruitment[$i]->end_date < $datenow ) {
+                $recruitment[$i]->status = 'Completed';
+            }
+        }
+
+        // dump($recruitment);
+
         return view('recruit/recruitments', compact('recruitment','user'));
     }
     
