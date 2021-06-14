@@ -96,7 +96,7 @@
   <h1 class="visually-hidden">Sidebar</h1>
 
   <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-primary" style="width: 280px;">
-      <img src="{{ asset('images/side-logo.png') }}" width="250" height="180">
+    <img src="{{ asset('images/side-logo.png') }}" width="250" height="180">
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
