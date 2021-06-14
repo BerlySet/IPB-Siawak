@@ -59,7 +59,8 @@ class RecruitmentsController extends Controller
                         ->where('is_canceled', '!=', true)
                         ->get();
 
-        return($recruitment);
+        // return($recruitment);
+        return view('recruit/rec_running', compact('recruitment','user'));
     }
 
     public function show_completed() {
@@ -75,7 +76,8 @@ class RecruitmentsController extends Controller
                         ->where('is_canceled', '!=', true)
                         ->get();
 
-        return($recruitment);
+        // return($recruitment);
+        return view('recruit/rec_complete', compact('recruitment','user'));
     }
 
     public function show_upcoming() {
@@ -91,7 +93,8 @@ class RecruitmentsController extends Controller
                         ->where('is_canceled', '!=', true)
                         ->get();
 
-        return($recruitment);
+        // return($recruitment);
+        return view('recruit/rec_upcoming', compact('recruitment','user'));
     }
 
     public function show_canceled() {
@@ -106,7 +109,8 @@ class RecruitmentsController extends Controller
                         ->where('is_canceled', '=', true)
                         ->get();
 
-        return($recruitment);
+        // return($recruitment);
+        return view('recruit/rec_canceled', compact('recruitment','user'));
     }
 
     /**

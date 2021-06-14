@@ -15,8 +15,8 @@
                         <div class="container-fluid">
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
-                                    <a class="nav-link active" aria-current="page" href="/recruitments">All</a>
-                                    <a class="nav-link" href="/recruitments/completed">Completed</a>
+                                    <a class="nav-link" href="/recruitments">All</a>
+                                    <a class="nav-link active" aria-current="page" href="/recruitments/completed">Completed</a>
                                     <a class="nav-link" href="/recruitments/running">Running</a>
                                     <a class="nav-link" href="/recruitments/upcoming">Upcoming</a>
                                     <a class="nav-link" href="/recruitments/canceled">Canceled</a>
@@ -31,8 +31,6 @@
                 </div>
 
             </div>
-
-
 
             <table class="table">
                 <thead class="table-info">
@@ -52,30 +50,9 @@
                         <td>{{ $rec->judul }}</td>
                         <td>{{ $rec->start_date }}</td>
                         <td>{{ $rec->end_date }}</td>
-
-                        @switch($rec->status)
-                        @case('Completed')
                         <td>
                             <a href="/data" class="btn btn-success btn-sm">Completed</a>
                         </td>
-                        @break
-                        @case('Upcoming')
-                        <td>
-                            <button type="button" class="btn btn-warning btn-sm">Upcoming</button>
-                        </td>
-                        @break
-
-                        @case('Running')
-                        <td>
-                            <button type="button" class="btn btn-primary btn-sm">Running</button>
-                        </td>
-                        @break
-
-                        @default
-                        <td>
-                            <button type="button" class="btn btn-danger btn-sm">Canceled</button>
-                        </td>
-                        @endswitch
                     </tr>
                     @endforeach
                 </tbody>
