@@ -16,7 +16,7 @@
                         <div class="row">
                             <div class="col text-center">
                                     <div class="features-icons-icon text-center">
-                                    <a href="/user/recruitments">
+                                    <a href="/recruitments">
                                         <svg class="align-middle" width="90" height="90"><use xlink:href="#speedometer2"/></svg>
                                     </a>
                                     </div>
@@ -24,7 +24,7 @@
                             </div>    
                             <div class="col text-center">
                                     <div class="features-icons-icon">
-                                    <a href="/user/history">
+                                    <a href="/members">
                                         <svg class="align-middle" width="90" height="90"><use xlink:href="#table"/></svg>
                                     </a>
                                     </div>
@@ -32,7 +32,7 @@
                             </div>
                             <div class="col text-center">
                                     <div class="features-icons-icon">
-                                    <a href="/user/history">
+                                    <a href="/certificate">
                                         <svg class="align-middle" width="90" height="90"><use xlink:href="#grid"/></svg>
                                     </a>
                                     </div>
