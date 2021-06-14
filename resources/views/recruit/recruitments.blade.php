@@ -34,7 +34,7 @@
                         @switch($rec->status)
                         @case('Completed')
                         <td>
-                            <button type="button" class="btn btn-success btn-sm">Completed</button>
+                            <a href="/data" class="btn btn-success btn-sm">Completed</a>
                         </td>
                         @break
                         @case('Upcoming')

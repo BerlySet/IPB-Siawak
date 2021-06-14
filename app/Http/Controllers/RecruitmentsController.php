@@ -122,6 +122,14 @@ class RecruitmentsController extends Controller
         return view('recruit/create',compact('recruitment','user'));
     }
 
+    public function data()
+    {
+        $user = Auth::user();
+        $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
+        $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)->get();
+        return view('recruit/data',compact('recruitment','user'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
