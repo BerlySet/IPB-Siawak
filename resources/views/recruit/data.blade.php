@@ -8,6 +8,8 @@
         <div class="container">
             <h2 class="container">Applicant Detail</h2>
             <div class="container">Data lengkap pelamar</div>
+
+            
                 <div style = "position:relative; left: 350px;">
                     <a href="#" class="btn btn-danger">Tolak</a>
                     <a href="#" class="btn btn-success">Terima</a>
