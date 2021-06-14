@@ -15,20 +15,20 @@
                         <div class="card-body">
                         <div class="row">
                             <div class="col text-center">
-                                <a href="/user/recruitments">
                                     <div class="features-icons-icon text-center">
+                                    <a href="/user/recruitments">
                                         <svg class="align-middle" width="90" height="90"><use xlink:href="#speedometer2"/></svg>
                                     </div>
+                                    </a>
                                     <p>Lihat perekrutan kepengurusan dan kepanitiaan yang sedang dibuka </p>
-                                </a>
                             </div>    
                             <div class="col text-center">
-                                <a href="/user/history">
                                     <div class="features-icons-icon">
+                                    <a href="/user/history">
                                         <svg class="align-middle" width="90" height="90"><use xlink:href="#toggles2"/></svg>
+                                    </a>
                                     </div>
                                     <p>Lihat history perekrutan yang telah diikuti </p>
-                                </a>
                             </div>
                         </div>
                         </div>
