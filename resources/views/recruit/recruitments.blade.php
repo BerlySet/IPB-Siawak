@@ -8,67 +8,60 @@
         <div class="container">
             <h2 class="container">Recruitments</h2>
             <div class="container">Data pembukaan pendaftaran yang telah dibuat </div>
-                <div style = "position:relative; left: 650px;">
-                    <a href="/create" class="btn btn-primary">New Open Reacruitment</a>
-                </div>
+            <div style="position:relative; left: 650px;">
+                <a href="/create" class="btn btn-primary">New Open Recruitment</a>
+            </div>
 
-                <table class="table my-3">
-                    <thead class="table-info">
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Nama Acara</th>
-                            <th scope="col">Waktu Pembukaan</th>
-                            <th scope="col">Waktu Penutupan</th>
-                            <th scope="col">Status</th>
-                        </tr>
-                    </thead>
-        
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Panitia MPKMB 59</td>
-                            <td>16-02-2022</td>
-                            <td>16-03-2022</td>
-                            <td>
+            <table class="table my-3">
+                <thead class="table-info">
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Acara</th>
+                        <th scope="col">Waktu Pembukaan</th>
+                        <th scope="col">Waktu Penutupan</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach ($recruitment as $rec)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $rec->judul }}</td>
+                        <td>{{ $rec->start_date }}</td>
+                        <td>{{ $rec->end_date }}</td>
+
+                        @switch($rec->status)
+                        @case('Completed')
+                        <td>
                             <button type="button" class="btn btn-success btn-sm">Completed</button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>Oprec Staff Seruni 2022</td>
-                            <td>03-07-2022</td>
-                            <td>17-07-2022</td>
-                            <td>
+                        </td>
+                        @break
+                        @case('Upcoming')
+                        <td>
                             <button type="button" class="btn btn-warning btn-sm">Upcoming</button>
-                            </td>
-                        </tr>
+                        </td>
+                        @break
 
-                        <tr>
-                            <td>3</td>
-                            <td>Oprec Pimpinan Genus 2022</td>
-                            <td>09-04-2022</td>
-                            <td>22-04-2022</td>
-                            <td>
+                        @case('Running')
+                        <td>
                             <button type="button" class="btn btn-primary btn-sm">Running</button>
-                            </td>
-                        </tr>
+                        </td>
+                        @break
 
-                        <tr>
-                            <td>4</td>
-                            <td>Oprec Staff OMI 2020</td>
-                            <td>13-11-2020</td>
-                            <td>26-11-2020</td>
-                            <td>
+                        @default
+                        <td>
                             <button type="button" class="btn btn-danger btn-sm">Canceled</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                        </td>
+                        @endswitch
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
 
-        <div class="b-example-divider"></div>
+            <div class="b-example-divider"></div>
+        </div>
     </div>
-</div>
-@endsection
+    @endsection
 
-@section('user', $user->nama )
+    @section('user', $user->nama )
