@@ -6,6 +6,7 @@ html,body{
 }
 
 .bg{
+    position: absolute;
     width: 100%;
     height: 100%;
     background-image: url("bg login.png");
@@ -16,19 +17,10 @@ html,body{
 .kotaka{
     position: absolute;
     width: 1210px;
-    height: 100px;
+    height: 610px;
     left: 80px;
     top: 20px;
      
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.kotakb{
-    position: absolute;
-    width: 1210px;
-    height: 100px;
-    left: 80px;
-    top: 550px; 
     background: rgba(0, 0, 0, 0.5);
 }
 
@@ -36,7 +28,7 @@ html,body{
     position: absolute;
     width: 1210px;
     height: 430px;
-    left: 80px;
+    left: 0px;
     top: 120px;
     background: #F2F4F6;
 }
@@ -45,7 +37,7 @@ html,body{
     position: absolute;
     width: 317px;
     height: 83px;
-    left: 500px;
+    left: 450px;
     top: 25px;
     background-image: url("logo.png");
     background-repeat: no-repeat;
@@ -53,7 +45,24 @@ html,body{
 }
 
 .teksb{
+    text-align: center;
+    top: 700px;
     letter-spacing: 2px;
+}
+
+.scale{
+    transform: scale(0.8) translate(-13%, -13%);
+}
+
+.foto{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 500px;
+    top: -100px;
+    background-image: url("fotologin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
