@@ -23,7 +23,13 @@
     <div class="bg">
         <div class="kotaka"></div>
         <div class="kotakb">
-            <center><h2 style="color:#FFFFFF">Sistem Informasi Anggota Ormawa dan Kepanitiaan IPB</h2></center>
+            <div class="teksb">
+                <br>
+                <br>
+                    <center><h4 style="color:#FFFFFF">Sistem Informasi Anggota Ormawa dan Kepanitiaan IPB</h4></center>
+                </br>
+                </br>
+        </div>
         </div>
         <div class="kotak"></div>
         <div class="logo"></div>
