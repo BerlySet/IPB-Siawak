@@ -13,7 +13,8 @@
 
 <div class="sidebar-right" id="sidebar">
     <button class="btn btn-primary btn-lg btn-circle" onclick="sidebarClose()"> <i class="fa fa-times"></i> </button>
-    <a href="#" class="active">Login</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/login" class="active">Login</a>
 </div>
 
 <div class="bg">
@@ -25,7 +26,8 @@
             </a>
         </div>
         <div class="menu">
-            <a href="#" class="active">Login</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/login" class="active">Login</a>
             <button class="btn btn-primary btn-lg icon" onclick="sidebarOpen()"><i class="fa fa-bars"></i></button>
         </div>
     </nav>

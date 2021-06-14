@@ -19,7 +19,7 @@ use App\Http\Controllers\CertificateController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Route::get('/template', function () {
