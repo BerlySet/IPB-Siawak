@@ -3,6 +3,7 @@
 @section('title', 'Applicant Detail')
 
 @section('container')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="overflow-auto w-100">
     <div class=".d-flex mx-5 my-3">
         <div class="container">
@@ -30,8 +31,8 @@
                             <td>Divis HRD</td>
                             <td>
                             <button type="button" class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class='fas fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
-                            <button type="button" class="btn btn-primary btn-sm"><i class='fas fa-search' style='font-size:24px;color:white'></i></button>
+                            <button type="button" class="btn btn-danger btn-sm"><i class='fa fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
+                            <button type="button" class="btn btn-primary btn-sm"><i class='fa fa-search' style='font-size:24px;color:white'></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -42,8 +43,8 @@
                             <td>Divis Eksternal</td>
                             <td>
                             <button type="button" class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class='fas fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
-                            <button type="button" class="btn btn-primary btn-sm"><i class='fas fa-search' style='font-size:24px;color:white'></i></button>
+                            <button type="button" class="btn btn-danger btn-sm"><i class='fa fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
+                            <button type="button" class="btn btn-primary btn-sm"><i class='fa fa-search' style='font-size:24px;color:white'></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -54,8 +55,8 @@
                             <td>Divis Pasang</td>
                             <td>
                             <button type="button" class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class='fas fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
-                            <button type="button" class="btn btn-primary btn-sm"><i class='fas fa-search' style='font-size:24px;color:white'></i></button>
+                            <button type="button" class="btn btn-danger btn-sm"><i class='fa fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
+                            <button type="button" class="btn btn-primary btn-sm"><i class='fa fa-search' style='font-size:24px;color:white'></i></button>
                             </td>
                         </tr>
 
