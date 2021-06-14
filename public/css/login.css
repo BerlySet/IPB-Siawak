@@ -3,49 +3,6 @@ html,body{
     margin: 0;
     height: 100%;
     overflow-x: hidden;
-    font-family: "Open Sans";
-
-}
-
-.sidebar-right .btn-circle{
-    border-radius: 50px;
-}
-
-.sidebar-right .btn{
-    margin: 16px 0px 24px 16px;
-}
-
-.sidebar-right{
-    height: 100%;
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    right: 0px;
-    z-index: 99;
-    transform: translateX(300px);
-    transition: 500ms;
-
-}
-
-.sidebar-right a{
-    display: block;
-    color: white;
-    text-align: left;
-    padding: 8px 0px 0px 24px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-
-}
-
-.sidebar-right a:hover {
-    color: #6699CB;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-.sidebar-right .active{
-    color: #6699CB;
 }
 
 .bg{
@@ -56,98 +13,45 @@ html,body{
     background-size: cover;
 }
 
-
-.navbar{
-    width: 100%;
-    height: 75px;
+.kotaka{
+    position: absolute;
+    width: 1210px;
+    height: 100px;
+    left: 80px;
+    top: 20px;
+     
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.logo a{
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 0px 0px 0px 40px;
+.kotakb{
+    position: absolute;
+    width: 1210px;
+    height: 100px;
+    left: 80px;
+    top: 550px; 
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.logo a:hover{
-    text-decoration: none;
+.kotak{
+    position: absolute;
+    width: 1210px;
+    height: 430px;
+    left: 80px;
+    top: 120px;
+    background: #F2F4F6;
 }
 
-.menu a{
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 0px 40px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
+.logo{
+    position: absolute;
+    width: 317px;
+    height: 83px;
+    left: 500px;
+    top: 25px;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.menu .active{
-    color: #6699CB;
-}
-
-.menu a:hover {
-    color: #6699CB;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .menu .icon{
-      display:none;
-  }
-
-
-  .content-left{
-    position: relative;
-  }
-
-
-  .text-blue{
-      color: #6699CB;
-  }
-
-  .description{
-      max-width: 300px;
-  }
-
-  .btn-primary{
-      background-color: #6699CB !important;
-  }
-
-  .btn{
-      border-radius: 50px !important;
-  }
-
-  @media screen and (max-width: 600px) {
-    .menu .icon{
-        display: block;
-    }
-
-    .menu a{
-        display: none;
-    }
-
-    .image1{
-        display: none;
-    }
-    .content-left{
-        margin-left: 80px;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    .menu .icon{
-        display: block;
-    }
-
-    .menu a{
-        display: none;
-    }
-    .image1{
-        display: none;
-    }
-  }
 
 /* Extra large devices (large desktops) */
 /* No media query since the extra-large breakpoint has no upper bound on its width */
