@@ -96,10 +96,7 @@
   <h1 class="visually-hidden">Sidebar</h1>
 
   <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-primary" style="width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <img src="https://github.com/anggario21.png" width="32" height="32">
-      <span class="fs-4">IPB Siawak</span>
-    </a>
+      <img src="{{ asset('images/side-logo.png') }}" width="250" height="180">
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
