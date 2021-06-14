@@ -38,7 +38,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/dashboard', [UsersController::class, 'dashboard'])->name('chairman');
 
         // RECRUITMENT
-        // Route::get('/recruitments', [RecruitmentsController::class, 'index']);
+        Route::get('/recruitments', [RecruitmentsController::class, 'index']);
         Route::get('recruitments/completed', [RecruitmentsController::class, 'show_completed'])->name('rec_completed');
         Route::get('recruitments/running', [RecruitmentsController::class, 'show_running'])->name('rec_running');
         Route::get('recruitments/upcoming', [RecruitmentsController::class, 'show_upcoming'])->name('rec_upcoming');
