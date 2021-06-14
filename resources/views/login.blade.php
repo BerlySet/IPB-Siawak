@@ -44,7 +44,7 @@
                                         </div>
                                         @endif
                                         <div class="card-header">
-                                            <h2 class="text-center font-weight-bolder my-4">LOGIN SIAWAK</h2>
+                                            <h3 class="text-center font-weight-bolder my-4">LOGIN SIAWAK</h3>
                                         </div>
                                         <div class="card-body">
                                             <form action="{{url('proses_login')}}" method="POST" id="logForm">
