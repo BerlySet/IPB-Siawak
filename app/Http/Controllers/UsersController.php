@@ -101,7 +101,7 @@ class UsersController extends Controller
     public function dashboard_user()
     {
         $user = Auth::user();
-        return view('User.dashboard' , compact('user'));
+        return view('dashboard_user' , compact('user'));
     }
 
     public function profile_user()
