@@ -1,0 +1,57 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    background-image: url("bg login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.kotaka{
+    position: absolute;
+    width: 1210px;
+    height: 100px;
+    left: 80px;
+    top: 20px;
+     
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.kotakb{
+    position: absolute;
+    width: 1210px;
+    height: 100px;
+    left: 80px;
+    top: 550px; 
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.kotak{
+    position: absolute;
+    width: 1210px;
+    height: 430px;
+    left: 80px;
+    top: 120px;
+    background: #F2F4F6;
+}
+
+.logo{
+    position: absolute;
+    width: 317px;
+    height: 83px;
+    left: 500px;
+    top: 25px;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Extra large devices (large desktops) */
+/* No media query since the extra-large breakpoint has no upper bound on its width */
