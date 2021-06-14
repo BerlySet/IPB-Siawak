@@ -9,7 +9,7 @@
             <h2 class="container">Recruitments</h2>
             <div class="container">Data pembukaan pendaftaran yang telah dibuat </div>
                 <div style = "position:relative; left: 650px;">
-                    <a href="/" class="btn btn-primary">New Open Reacruitment</a>
+                    <a href="/create" class="btn btn-primary">New Open Reacruitment</a>
                 </div>
 
                 <table class="table my-3">

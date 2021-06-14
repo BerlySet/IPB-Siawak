@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('recruitments/upcoming', [RecruitmentsController::class, 'show_upcoming'])->name('rec_upcoming');
         Route::get('recruitments/canceled', [RecruitmentsController::class, 'show_canceled'])->name('rec_canceled');
         Route::resource('recruitments', RecruitmentsController::class);
+        Route::get('/create', [RecruitmentsController::class,'create']);
 
         // PROFILE
         Route::get('/profile', [UsersController::class, 'index']);

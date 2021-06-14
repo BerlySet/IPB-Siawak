@@ -99,7 +99,10 @@ class RecruitmentsController extends Controller
      */
     public function create()
     {
-        return view('recruit/create');
+        $user = Auth::user();
+        $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
+        $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)->get();
+        return view('recruit/create',compact('recruitment','user'));
     }
 
     /**
