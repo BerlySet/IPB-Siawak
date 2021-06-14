@@ -15,28 +15,28 @@
                         <div class="card-body">
                         <div class="row">
                             <div class="col text-center">
-                                <a href="/user/recruitments">
                                     <div class="features-icons-icon text-center">
+                                    <a href="/user/recruitments">
                                         <svg class="align-middle" width="90" height="90"><use xlink:href="#speedometer2"/></svg>
+                                    </a>
                                     </div>
                                     <p>Lihat atau tambahkan pendaftaran kepengurusan atau acara.</p>
-                                </a>
                             </div>    
                             <div class="col text-center">
-                                <a href="/user/history">
                                     <div class="features-icons-icon">
+                                    <a href="/user/history">
                                         <svg class="align-middle" width="90" height="90"><use xlink:href="#table"/></svg>
+                                    </a>
                                     </div>
                                     <p>Lihat atau edit posisi, status dan divisi pengurus.</p>
-                                </a>
                             </div>
                             <div class="col text-center">
-                                <a href="/user/history">
                                     <div class="features-icons-icon">
+                                    <a href="/user/history">
                                         <svg class="align-middle" width="90" height="90"><use xlink:href="#grid"/></svg>
+                                    </a>
                                     </div>
                                     <p>Lihat atau isi SKPI dari kepengurusan atau acara.</p>
-                                </a>
                             </div>
                         </div>
                         </div>
