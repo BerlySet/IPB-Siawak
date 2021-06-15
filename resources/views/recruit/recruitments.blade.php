@@ -9,6 +9,12 @@
             <h2 class="container">Recruitments</h2>
             <div class="container">Data pembukaan pendaftaran yang telah dibuat </div>
 
+            @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+            @endif
+
             <div class="row align-items-center">
                 <div class="col align-self-end">
                     <nav class="navbar navbar-expand navbar-light">
@@ -63,7 +69,7 @@
                         @case('Upcoming')
                         <td>
                             <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                            data-bs-target="#upcomingModal">Upcoming</a>
+                                data-bs-target="#upcomingModal">Upcoming</a>
                         </td>
                         @break
 
@@ -77,7 +83,7 @@
                         @default
                         <td>
                             <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                            data-bs-target="#cancelModal">Canceled</a>
+                                data-bs-target="#cancelModal">Canceled</a>
                         </td>
                         @endswitch
                     </tr>

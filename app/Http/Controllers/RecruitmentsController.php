@@ -143,6 +143,8 @@ class RecruitmentsController extends Controller
      */
     public function store(Request $request)
     {
+        // return($request);
+
         $user = Auth::user();
         $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
 
@@ -171,29 +173,36 @@ class RecruitmentsController extends Controller
         Event::create([
             'nama_event' => $request->nama_event,
             'kategori' => $request->kategori,
+            'tahun_akademik' => $request->tahun_akademik,
             'e_idormawa' => $chairman[0]->c_idormawa,
         ]);
+
+        $event = Event::where('nama_event', $request->nama_event)
+        ->where('kategori', $request->kategori)
+        ->get();
         
-        for ($i=0; $i < length($divisi); $i++) { 
+        for ($i=0; $i < count($request->divisi); $i++) { 
             // $div = Division::where('nama_divisi', $divisi->nama_divisi)->get();
             // if (!count($div)) {
             
             Division::create([
-                'nama_divisi' => $request->nama_divisi,
-                'd_idevent' => $request->tahun_akademik,
+                'nama_divisi' => $request->divisi[$i],
+                'd_idevent' => $event[0]->id,
             ]);
             // }
         }
 
         Recruitment::create([
             'judul' => $request->judul,
-            'tahun_akademik' => $request->tahun_akademik,
             'kriteria_pendaftar' => $request->kriteria_pendaftar,
             'start_date' => $request->start_date,
             'end_date' => $request->end_date,
+            'is_canceled' => 0,
             'rec_idormawa' => $chairman[0]->c_idormawa,
-            // 'rec_idevent' => id event yang baru di create
+            'rec_idevent' => $event[0]->id,
         ]);
+        
+        return redirect('/recruitments')->with('status', 'Perekrutan Berhasil Dibuat!');;
     }
 
     /**
@@ -289,7 +298,7 @@ class RecruitmentsController extends Controller
                     'rec_idormawa' => $chairman[0]->c_idormawa,
                     // 'rec_idevent' => id event yang baru di create
                 ]);
-        return redirect('recruit/recruitments')->with('status', 'Data Berhasil Diubah!');;
+        return redirect('recruit/recruitments')->with('status', 'Data Berhasil Diubah!');
         
         // TODO EDIT DIVISI + EVENT
         // Event::create([

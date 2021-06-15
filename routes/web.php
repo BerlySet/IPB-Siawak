@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('recruitments/upcoming', [RecruitmentsController::class, 'show_upcoming'])->name('rec_upcoming');
         Route::get('recruitments/canceled', [RecruitmentsController::class, 'show_canceled'])->name('rec_canceled');
         Route::get('recruitments/create', [RecruitmentsController::class,'create']);
+        Route::post('recruitments/create', [RecruitmentsController::class,'store']);
         Route::get('recruitments/data/{id}', [RecruitmentsController::class,'show']);
         Route::post('recruitments/data/{id}/terima', [RecruitmentsController::class,'terima_user']);
         Route::post('recruitments/data/{id}/tolak', [RecruitmentsController::class,'tolak_user']);

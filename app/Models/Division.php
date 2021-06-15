@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Division extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama_divisi'];
+    protected $fillable = ['nama_divisi', 'd_idevent'];
 }
