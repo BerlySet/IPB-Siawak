@@ -114,28 +114,69 @@
                     <div class="form-group">
                         <div class="row g-3 align-items-center">
                             <div class="input-group mb-3">
-                                <div class="col-3 px-3">
-                                    <label for="divisi[]" class="col-form-label"><b>Pilihan Divisi</b></label>
+                                <div class="col-2">
+                                    <label for="divisi[]" class="col-form-label"><b>Pilihan Divisi Pertama</b></label>
                                 </div>
                                 <select id="divisi[]"
                                     class="selectpicker form-control @error('divisi[]') is-invalid @enderror"
                                     multiple data-live-search="true" name="divisi[]">
-                                    <option>G1 - Complex Problem Solving</option>
-                                    <option>G1 - Critical Thinking</option>
-                                    <option>G2 - Communication</option>
-                                    <option>G2 - Creativity & Innovation</option>
-                                    <option>G2 - Decision Making</option>
-                                    <option>G2 - Technology Savvy</option>
-                                    <option>G3 - Adaptability</option>
-                                    <option>G3 - Collaboration</option>
-                                    <option>G3 - Curiousity</option>
-                                    <option>G3 - Persistence & Grit</option>
-                                    <option>G4 - Initiative</option>
-                                    <option>G4 - Integrity</option>
-                                    <option>G4 - Intuitive</option>
-                                    <option>G4 - Leadership</option>
-                                    <option>G4 - Nationality</option>
-                                    <option>G4 - Social & Cultural Awareness</option>
+                                    <option>PSDM</option>
+                                    <option>Akpres</option>
+                                    <option>Senbud</option>
+                                    <option>DPOR</option>
+                                    <option>DKV</option>
+                                    <option>HRD</option>
+                                    <option>Kebijakan Kampus</option>
+                                    <option>Kebijakan Nasional</option>
+                                    <option>Kebijakan Daerah</option>
+                                    <option>Kebijakan Agrikompleks</option>
+                                    <option>Kajian Aksi dan Propaganda</option>
+                                    <option>Adkesmah</option>
+                                    <option>Sosmas</option>
+                                    <option>Perdes</option>
+                                    <option>LH</option>
+                                    <option>Internal</option>
+                                    <option>Eksternal</option>
+                                    <option>Medbrand</option>
+                                    <option>Riset</option>
+                                    <option>Edukasi</option>
+                                </select>
+                            </div>
+                        </div>
+                        @error('divisi[]')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="row g-3 align-items-center">
+                            <div class="input-group mb-3">
+                                <div class="col-2">
+                                    <label for="divisi[]" class="col-form-label"><b>Pilihan Divisi Kedua</b></label>
+                                </div>
+                                <select id="divisi[]"
+                                    class="selectpicker form-control @error('divisi[]') is-invalid @enderror"
+                                    multiple data-live-search="true" name="divisi[]">
+                                    <option>PSDM</option>
+                                    <option>Akpres</option>
+                                    <option>Senbud</option>
+                                    <option>DPOR</option>
+                                    <option>DKV</option>
+                                    <option>HRD</option>
+                                    <option>Kebijakan Kampus</option>
+                                    <option>Kebijakan Nasional</option>
+                                    <option>Kebijakan Daerah</option>
+                                    <option>Kebijakan Agrikompleks</option>
+                                    <option>Kajian Aksi dan Propaganda</option>
+                                    <option>Adkesmah</option>
+                                    <option>Sosmas</option>
+                                    <option>Perdes</option>
+                                    <option>LH</option>
+                                    <option>Internal</option>
+                                    <option>Eksternal</option>
+                                    <option>Medbrand</option>
+                                    <option>Riset</option>
+                                    <option>Edukasi</option>
                                 </select>
                             </div>
                         </div>
