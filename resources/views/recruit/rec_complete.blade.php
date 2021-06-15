@@ -1,6 +1,6 @@
 @extends('template.main')
 
-@section('title', 'Reacruitments')
+@section('title', 'Recruitments')
 
 @section('container')
 <div class="overflow-auto w-100">
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="col-auto">
-                    <a href="/create" class="btn btn-primary">New Open Recruitment</a>
+                    <a href="{{ url('/recruitments/create') }}" class="btn btn-primary">New Open Recruitment</a>
                 </div>
 
             </div>
@@ -51,7 +51,7 @@
                         <td>{{ $rec->start_date }}</td>
                         <td>{{ $rec->end_date }}</td>
                         <td>
-                            <a href="/data" class="btn btn-success btn-sm">Completed</a>
+                            <a href="{{ url('/recruitments/data/'.$rec->id) }}" class="btn btn-success btn-sm">Completed</a>
                         </td>
                     </tr>
                     @endforeach

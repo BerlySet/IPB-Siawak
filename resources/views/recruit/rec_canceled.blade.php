@@ -1,6 +1,6 @@
 @extends('template.main')
 
-@section('title', 'Reacruitments')
+@section('title', 'Recruitments')
 
 @section('container')
 <div class="overflow-auto w-100">
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="col-auto">
-                    <a href="/create" class="btn btn-primary">New Open Recruitment</a>
+                    <a href="{{ url('/recruitments/create') }}" class="btn btn-primary">New Open Recruitment</a>
                 </div>
 
             </div>
@@ -51,13 +51,31 @@
                         <td>{{ $rec->start_date }}</td>
                         <td>{{ $rec->end_date }}</td>
                         <td>
-                            <a href="#" class="btn btn-danger btn-sm">Canceled</a>
+                            <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#cancelModal">Canceled</a>
                         </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-
+            <!-- Modal -->
+            <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Anda telah membatalkan perekrutan ini!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="b-example-divider"></div>
         </div>
     </div>

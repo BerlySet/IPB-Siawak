@@ -43,10 +43,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('recruitments/running', [RecruitmentsController::class, 'show_running'])->name('rec_running');
         Route::get('recruitments/upcoming', [RecruitmentsController::class, 'show_upcoming'])->name('rec_upcoming');
         Route::get('recruitments/canceled', [RecruitmentsController::class, 'show_canceled'])->name('rec_canceled');
-        Route::resource('recruitments', RecruitmentsController::class);
-        Route::get('/create', [RecruitmentsController::class,'create']);
-        Route::get('/data', [RecruitmentsController::class,'data']);
-        Route::get('/detail', [RecruitmentsController::class,'detail']);
+        Route::get('recruitments/create', [RecruitmentsController::class,'create']);
+        Route::get('recruitments/data/{id}', [RecruitmentsController::class,'show']);
         
         // PROFILE
         Route::get('/profile', [UsersController::class, 'index']);
@@ -67,6 +65,7 @@ Route::group(['middleware' => ['auth']], function () {
         // LOG OUT
         Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     });
+
     // LOGIN MAHASISWA
     Route::group(['middleware' => ['cek_login_user']], function () {
         // DASHBOARD

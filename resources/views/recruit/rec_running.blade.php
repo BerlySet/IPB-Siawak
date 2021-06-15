@@ -1,6 +1,6 @@
 @extends('template.main')
 
-@section('title', 'Reacruitments')
+@section('title', 'Recruitments')
 
 @section('container')
 <div class="overflow-auto w-100">
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="col-auto">
-                    <a href="/create" class="btn btn-primary">New Open Recruitment</a>
+                    <a href="{{ url('/recruitments/create') }}" class="btn btn-primary">New Open Recruitment</a>
                 </div>
 
             </div>

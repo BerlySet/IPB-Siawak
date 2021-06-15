@@ -126,21 +126,13 @@ class RecruitmentsController extends Controller
         return view('recruit/create',compact('recruitment','user'));
     }
 
-    public function data()
-    {
-        $user = Auth::user();
-        $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
-        $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)->get();
-        return view('recruit/data',compact('recruitment','user'));
-    }
-
-    public function detail()
-    {
-        $user = Auth::user();
-        $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
-        $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)->get();
-        return view('recruit/detail',compact('recruitment','user'));
-    }
+    // public function data()
+    // {
+    //     $user = Auth::user();
+    //     $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
+    //     $recruitment = Recruitment::where('rec_idormawa', $chairman[0]->c_idormawa)->get();
+    //     return view('recruit/data',compact('recruitment','user'));
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -211,9 +203,24 @@ class RecruitmentsController extends Controller
      */
     public function show($id)
     {
-        $recruitment = Recruitment::findOrFail($id);
-        // return($recruitment);
-        return view('recruit/#', compact('recruitment'));
+        $user = Auth::user();
+        $registrant = Registrant::where('reg_idrec', $id)
+        ->join('users', 'registrants.reg_nim', '=', 'users.nim')
+        ->select('registrants.id', 'registrants.divisi_1', 'registrants.divisi_2', 'registrants.status',
+                'registrants.reg_idrec', 'registrants.reg_nim', 'users.nim', 'users.nama',
+                'users.jenis_kelamin', 'users.tempat_lahir', 'users.tanggal_lahir', 'users.tahun_masuk',
+                'users.agama', 'users.departemen', 'users.fakultas', 'users.no_handphone', 'users.email')
+        ->get();
+
+        for ($i=0; $i < count($registrant); $i++) { 
+            $div1 = Division::where('id', $registrant[$i]->divisi_1)->get();
+            $div2 = Division::where('id', $registrant[$i]->divisi_2)->get();
+            $registrant[$i]->divisi_1 = $div1[0]->nama_divisi;
+            $registrant[$i]->divisi_2 = $div2[0]->nama_divisi;
+        }
+
+        // dump($registrant);
+        return view('recruit/data',compact('registrant','user'));
     }
 
     /**

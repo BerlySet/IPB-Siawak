@@ -1,6 +1,6 @@
 @extends('template.main')
 
-@section('title', 'Reacruitments')
+@section('title', 'Recruitments')
 
 @section('container')
 <div class="overflow-auto w-100">
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="col-auto">
-                    <a href="/create" class="btn btn-primary">New Open Recruitment</a>
+                    <a href="{{ url('/recruitments/create') }}" class="btn btn-primary">New Open Recruitment</a>
                 </div>
 
             </div>
@@ -56,31 +56,70 @@
                         @switch($rec->status)
                         @case('Completed')
                         <td>
-                            <a href="/data" class="btn btn-success btn-sm">Completed</a>
+                            <a href="{{ url('/recruitments/data/'.$rec->id) }}"
+                                class="btn btn-success btn-sm">Completed</a>
                         </td>
                         @break
                         @case('Upcoming')
                         <td>
-                            <button type="button" class="btn btn-warning btn-sm">Upcoming</button>
+                            <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#upcomingModal">Upcoming</a>
                         </td>
                         @break
 
                         @case('Running')
                         <td>
-                            <button type="button" class="btn btn-primary btn-sm">Running</button>
+                            <a href="{{ url('/recruitments/data/'.$rec->id) }}"
+                                class="btn btn-primary btn-sm">Running</a>
                         </td>
                         @break
 
                         @default
                         <td>
-                            <button type="button" class="btn btn-danger btn-sm">Canceled</button>
+                            <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#cancelModal">Canceled</a>
                         </td>
                         @endswitch
                     </tr>
                     @endforeach
                 </tbody>
             </table>
+            <!-- Modal -->
+            <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Anda telah membatalkan perekrutan ini!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="modal fade" id="upcomingModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Pendaftar bisa dilihat ketika perekrutan telah dimulai!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="b-example-divider"></div>
         </div>
     </div>
