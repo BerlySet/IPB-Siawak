@@ -62,8 +62,10 @@
 
                     </tbody>
                 </table>
-
-                <div class="container">Tentukanlah penerimaan dengan teliti</div>
+                <div class="container" style = "position:relative; left: 250px;">Tentukanlah penerimaan dengan teliti</div>
+                
+                <a class=".d-flex mx-3 my-3" href="/recruitments"> Kembali </a>
+                
         <div class="b-example-divider"></div>
     </div>
 </div>
