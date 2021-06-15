@@ -91,34 +91,34 @@ Aplikasi yang dirancang adalah sistem aplikasi berbasis web. Web IPB Siawak memi
 
 ## Hasil dan pembahasan
 [`^ Kembali Keatas ^`](#)
-  ### Use case diagram
+  * Use case diagram
     <br>
-    <img src="public/images/git/Use Case.png">
-  ### Activity diagram
+    <img src="public/images/git/Use Case.png"/>
+  * Activity diagram
     <br>
-    <img src="public/images/git/Activity Diagram.png">
-  ### Class diagram 
+    <img src="public/images/git/Activity Diagram.png"/>
+  * Class diagram 
     <br>
-    <img src="public/images/git/Class Diagram.png">
-  ### Entity Relationship Diagram 
+    <img src="public/images/git/Class Diagram.png"/>
+  * Entity Relationship Diagram 
     <br>
-    <img src="public/images/git/ERD.png">
-  ### Arsitektur sistem 
+    <img src="public/images/git/ERD.png"/>
+  * Arsitektur sistem 
     <br>
-    <img src="public/images/git/Arsitektur.png">
+    <img src="public/images/git/Arsitektur.png"/>
     
-  ### Fungsi utama yang dikembangkan
-  ### Fungsi CRUD
+  * Fungsi utama yang dikembangkan
+  * Fungsi CRUD
 
 ## Hasil implementasi
 [`^ Kembali Keatas ^`](#)
   ### Screenshot sistem
-  <br>
   <img src="![WhatsApp Image 2021-06-16 at 04 36 34](https://user-images.githubusercontent.com/74443498/122131670-b9d8a800-ce63-11eb-9585-485d3871ffc1.jpeg)
 ">
 <br>
   <img src="![WhatsApp Image 2021-06-16 at 04 36 34 (1)](https://user-images.githubusercontent.com/74443498/122131754-d8d73a00-ce63-11eb-9093-e689d3f9b9e7.jpeg)
 ">
+<br>
   
   ### Link aplikasi (jika sudah di deploy)
 
