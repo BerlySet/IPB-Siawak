@@ -42,9 +42,11 @@
                         <td>{{ $reg->divisi_1 }}</td>
                         <td>{{ $reg->divisi_2 }}</td>
                         <td>
-                            <button type="button" class="btn btn-success btn-sm"><i class="fa fa-check-square-o"
+                            <button href="#" type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#terimaModal"><i class="fa fa-check-square-o"
                                     style="font-size:24px;color:white"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class='fa fa-exclamation-circle'
+                            <button href="#" type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#batalModal"><i class='fa fa-exclamation-circle'
                                     style='font-size:24px;color:white'></i></button>
                             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                 data-bs-target="#detailModal" data-bs-whatever="{{ $loop->iteration }}"><i
@@ -139,6 +141,45 @@
                     </div>
                 </div>
             </div>
+
+            <div class="modal fade" id="batalModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Anda yakin ingin menolak pelamar ini?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Ya</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tidak</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="terimaModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Anda yakin ingin menerima pelamar ini?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Ya</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tidak</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="container">Tentukanlah penerimaan dengan teliti</div>
             <a class="container" href="javascript:history.back()"> Kembali </a>
