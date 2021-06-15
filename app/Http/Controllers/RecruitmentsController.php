@@ -7,6 +7,7 @@ use App\Models\Recruitment;
 use App\Models\Chairman;
 use App\Models\Event;
 use App\Models\Division;
+use App\Models\Staff;
 use App\Models\Registrant;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
@@ -205,6 +206,7 @@ class RecruitmentsController extends Controller
     {
         $user = Auth::user();
         $registrant = Registrant::where('reg_idrec', $id)
+        ->where('status', NULL)
         ->join('users', 'registrants.reg_nim', '=', 'users.nim')
         ->select('registrants.id', 'registrants.divisi_1', 'registrants.divisi_2', 'registrants.status',
                 'registrants.reg_idrec', 'registrants.reg_nim', 'users.nim', 'users.nama',
@@ -215,12 +217,12 @@ class RecruitmentsController extends Controller
         for ($i=0; $i < count($registrant); $i++) { 
             $div1 = Division::where('id', $registrant[$i]->divisi_1)->get();
             $div2 = Division::where('id', $registrant[$i]->divisi_2)->get();
-            $registrant[$i]->divisi_1 = $div1[0]->nama_divisi;
-            $registrant[$i]->divisi_2 = $div2[0]->nama_divisi;
+            $registrant[$i]->nmdivisi_1 = $div1[0]->nama_divisi;
+            $registrant[$i]->nmdivisi_2 = $div2[0]->nama_divisi;
         }
 
         // dump($registrant);
-        return view('recruit/data',compact('registrant','user'));
+        return view('recruit/data',compact('registrant','user','id'));
     }
 
     /**
@@ -309,7 +311,29 @@ class RecruitmentsController extends Controller
     public function destroy($id)
     {
         Recruitment::destroy($id);
-        return redirect('recruit/recruitments')->with('status', 'Data Berhasil Dihapus!');;
+        return redirect('recruit/recruitments')->with('status', 'Data Berhasil Dihapus!');
+    }
+
+    public function terima_user(Request $request) {
+
+        $registrant = Registrant::where('id', $request->id_registrant)->get();
+        $recruitment = Recruitment::where('id', $registrant[0]->reg_idrec)->get();
+     
+        Staff::create([
+            'jabatan' => 'Staff',
+            'tahun_jabatan' => 2020,
+            'status' => 1,
+            's_idevent' => $recruitment[0]->rec_idevent,
+            's_iddivisi' => $request->id_divisi_1,
+            's_nim' => $registrant[0]->reg_nim,
+        ]);
+
+        Registrant::where('id', $request->id_registrant)
+                ->update([
+                    'status' => 1,
+                ]);
+
+        return redirect('recruitments/data/'.$request->id_oprec)->with('status', 'Pendaftar Berhasil Diterima!');
     }
 
     #----------------------- USER / CLIENT SIDE -----------------------------------

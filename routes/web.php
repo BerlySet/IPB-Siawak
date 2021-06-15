@@ -45,6 +45,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('recruitments/canceled', [RecruitmentsController::class, 'show_canceled'])->name('rec_canceled');
         Route::get('recruitments/create', [RecruitmentsController::class,'create']);
         Route::get('recruitments/data/{id}', [RecruitmentsController::class,'show']);
+        Route::post('recruitments/data/{id}/terima', [RecruitmentsController::class,'terima_user']);
         
         // PROFILE
         Route::get('/profile', [UsersController::class, 'index']);
