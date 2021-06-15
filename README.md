@@ -68,7 +68,7 @@ IPB Siawak (Sistem Informasi Anggota Ormawa dan Kepanitiaan) adalah sebuah siste
    
 ## Ruang Lingkup Pengembangan
 [`^ Kembali Keatas ^`](#)
-Aplikasi yang dirancang adalah sistem aplikasi berbasis Web yaitu Web IPB Siawak. Web IPB Siawak memiliki  fitur pencatatan anggota ormawa, menampilkan ormawa dan kepanitiaan yang sedang  oprec. Web IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan) disimpan dalam database dengan operasi insert, delete, dan view data yang ditampilkan dalam web. Data yang di input berdasarkan mahasiswa yang melakukan pendaftaran sehingga datanya pun tersimpan di dalam database.
+Aplikasi yang dirancang adalah sistem aplikasi berbasis web. Web IPB Siawak memiliki  fitur pencatatan anggota ormawa, menampilkan ormawa dan kepanitiaan yang sedang  oprec. Web IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan) disimpan dalam database dengan operasi insert, delete, dan view data yang ditampilkan dalam web. Data yang di input berdasarkan mahasiswa yang melakukan pendaftaran sehingga datanya pun tersimpan di dalam database.
  
 ## Konsep OOP yang digunakan
 [`^ Kembali Keatas ^`](#) 
@@ -81,8 +81,8 @@ Aplikasi yang dirancang adalah sistem aplikasi berbasis Web yaitu Web IPB Siawak
 #### 2.	Encapsulation
   * Encapsulation memungkinkan sebuah atribut yang hanya dapat diakses oleh sebuah class untuk diakses oleh class lain menggunakan sebuah method
   * Encapsulation merupakan kombinasi data dan fungsionalitas dalam sebuah unit tunggal sebagai bentuk untuk menyembunyikan detail informasi.
-  * Enkapsulasi menekankan pada antarmuka suatu kelas, atau dengan kata lain bagaimana menggunakan objek kelas tertentu.
-  * Proses enkapsulasi memudahkan kita untuk menggunakan sebuah objek dari suatu kelas karena kita tidak perlu mengetahui segala hal secara rinci.
+  * Enkapsulation menekankan pada antarmuka suatu kelas, atau dengan kata lain bagaimana menggunakan objek kelas tertentu.
+  * Proses enkapsulation memudahkan kita untuk menggunakan sebuah objek dari suatu kelas karena kita tidak perlu mengetahui segala hal secara rinci.
 
 ## Tipe desain pengembangan yang digunakan (Pattern/Anti Pattern)
 [`^ Kembali Keatas ^`](#)      
@@ -90,28 +90,36 @@ Aplikasi yang dirancang adalah sistem aplikasi berbasis Web yaitu Web IPB Siawak
 
 ## Hasil dan pembahasan
 [`^ Kembali Keatas ^`](#)
-  * Use case diagram
+  ### Use case diagram
     <br> 
     <img src="public/images/git/Use Case.png"/>
-  * Activity diagram
+  ### Activity diagram
     <br>
     <img src="public/images/git/Activity Diagram.png"/>
-  * Class diagram 
+  ### Class diagram 
     <br>
     <img src="public/images/git/Class Diagram.png"/>
-  * Entity Relationship Diagram 
+  ### Entity Relationship Diagram 
     <br>
     <img src="public/images/git/ERD.png"/>
-  * Arsitektur sistem 
+  ### Arsitektur sistem 
     <br>
     <img src="public/images/git/Arsitektur.png"/>
-  * Fungsi utama yang dikembangkan
-  * Fungsi CRUD
+  ### Fungsi utama yang dikembangkan
+  ### Fungsi CRUD
 
 ## Hasil implementasi
 [`^ Kembali Keatas ^`](#)
-  * Screenshot sistem 
-  * Link aplikasi (jika sudah di deploy)
+  ### Screenshot sistem 
+  <br>
+  <img src="![WhatsApp Image 2021-06-16 at 04 36 34](https://user-images.githubusercontent.com/74443498/122131670-b9d8a800-ce63-11eb-9585-485d3871ffc1.jpeg)
+"/>
+  <br>
+  <img src="![WhatsApp Image 2021-06-16 at 04 36 34 (1)](https://user-images.githubusercontent.com/74443498/122131754-d8d73a00-ce63-11eb-9093-e689d3f9b9e7.jpeg)
+"/>
+  <br>
+  
+  ### Link aplikasi (jika sudah di deploy)
 
 ## Saran untuk pengembangan selanjutnya
 [`^ Kembali Keatas ^`](#)   
