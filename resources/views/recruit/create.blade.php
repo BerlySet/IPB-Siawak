@@ -89,7 +89,7 @@
                         <div class="d-flex my-2">
                             <div class="input-group mb-1">
                                 <div class="col-sm-2">
-                                    <label for="inputTanggal" class="col-form-label"><b>Tanggal Kegiatan</b></label>
+                                    <label for="inputTanggal" class="col-form-label"><b>Tanggal Pendaftaran</b></label>
                                 </div>
                                 <div class="col">
                                     <input type="date" id="start_date"
