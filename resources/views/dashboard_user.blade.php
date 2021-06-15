@@ -8,12 +8,14 @@
         <div class="container">
         <h2 class="container">Dashboard</h2>
             <div class="container-fluid">
-                <div class="row">
-                    <h5>Selamat datang, <?php echo $user->nama; ?></h5>
-                    <p>Silahkan pilih menu.</p>
+                <div class="row" >
+                    <div class="col-md-12" style="padding:10px 15px 10px; border: 1px solid Lightgray; margin-bottom:10px;">
+                        <h5>Selamat datang, <?php echo $user->nama; ?></h5>
+                        <p>Silahkan pilih menu.</p>
+                    </div>
                     <div class="card">
                         <div class="card-body">
-                        <div class="row">
+                        <div class="row" style="padding:50px 0px 50px;">
                             <div class="col text-center">
                                     <div class="features-icons-icon text-center">
                                     <a href="/user/recruitments">
