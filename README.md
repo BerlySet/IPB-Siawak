@@ -114,10 +114,6 @@ Pass : 12345
 Email : berly@apps.ipb.ac.id / ebuy@apps.ipb.ac.id
 Pass : 12345
 
-# KOM334 - Pengembangan Sistem Berorientasi Objek
-Projek Akhir PSBO
-Kelompok 6 - P2
-
 ## Step Before Coding
 - Clone your project `git clone https://github.com/BerlySet/PSBO.git`
 - Go to the folder application using `cd` command on your cmd or terminal
