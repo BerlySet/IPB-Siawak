@@ -83,10 +83,15 @@ IPB Siawak (Sistem Informasi Anggota Ormawa dan Kepanitiaan) adalah sebuah siste
 ## Hasil dan pembahasan
 [`^ Kembali Keatas ^`](#)
   * Use case diagram 
-  * Activity diagram 
+    <img src="public/images/git/Use Case.png"/>
+  * Activity diagram
+    <img src="public/images/git/Activity Diagram.png"/>
   * Class diagram 
+    <img src="public/images/git/Class Diagram.png"/>
   * Entity Relationship Diagram 
+    <img src="public/images/git/ERD.png"/>
   * Arsitektur sistem 
+    <img src="public/images/git/Arsitektur.png"/>
   * Fungsi utama yang dikembangkan
   * Fungsi CRUD
 
