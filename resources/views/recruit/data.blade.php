@@ -30,9 +30,9 @@
                             <td>Divis Eksternal</td>
                             <td>Divis HRD</td>
                             <td>
-                            <button type="button" class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class='fa fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
-                            <button type="button" class="btn btn-primary btn-sm"><i class='fa fa-search' style='font-size:24px;color:white'></i></button>
+                            <a class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></a>
+                            <a class="btn btn-danger btn-sm"><i class='fa fa-exclamation-circle' style='font-size:24px;color:white'></i></a>
+                            <a href="/detail" class="btn btn-primary btn-sm"><i class='fa fa-search' style='font-size:24px;color:white'></i></a>
                             </td>
                         </tr>
                         <tr>
@@ -42,9 +42,9 @@
                             <td>Divis HRD</td>
                             <td>Divis Eksternal</td>
                             <td>
-                            <button type="button" class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class='fa fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
-                            <button type="button" class="btn btn-primary btn-sm"><i class='fa fa-search' style='font-size:24px;color:white'></i></button>
+                            <a class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></a>
+                            <a class="btn btn-danger btn-sm"><i class='fa fa-exclamation-circle' style='font-size:24px;color:white'></i></a>
+                            <a class="btn btn-primary btn-sm"><i class='fa fa-search' style='font-size:24px;color:white'></i></a>
                             </td>
                         </tr>
                         <tr>
@@ -54,9 +54,9 @@
                             <td>Divis Bongkar</td>
                             <td>Divis Pasang</td>
                             <td>
-                            <button type="button" class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class='fa fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
-                            <button type="button" class="btn btn-primary btn-sm"><i class='fa fa-search' style='font-size:24px;color:white'></i></button>
+                            <a class="btn btn-success btn-sm"><i class="fa fa-check-square-o" style="font-size:24px;color:white"></i></a>
+                            <a class="btn btn-danger btn-sm"><i class='fa fa-exclamation-circle' style='font-size:24px;color:white'></i></a>
+                            <a class="btn btn-primary btn-sm"><i class='fa fa-search' style='font-size:24px;color:white'></i></a>
                             </td>
                         </tr>
 

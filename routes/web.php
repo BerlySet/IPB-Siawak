@@ -46,6 +46,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('recruitments', RecruitmentsController::class);
         Route::get('/create', [RecruitmentsController::class,'create']);
         Route::get('/data', [RecruitmentsController::class,'data']);
+        Route::get('/detail', [RecruitmentsController::class,'detail']);
         
         // PROFILE
         Route::get('/profile', [UsersController::class, 'index']);
