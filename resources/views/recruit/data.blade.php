@@ -12,7 +12,13 @@
 
             @if (session('status'))
             <div class="alert alert-success">
-              {{ session('status') }}
+                {{ session('status') }}
+            </div>
+            @endif
+
+            @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
             </div>
             @endif
 
@@ -49,11 +55,11 @@
                         <td>{{ $reg->nmdivisi_2 }}</td>
                         <td>
                             <button href="#" type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
-                                data-bs-target="#terimaModal" data-bs-whatever="{{ $loop->iteration }}"><i class="fa fa-check-square-o"
-                                    style="font-size:24px;color:white"></i></button>
+                                data-bs-target="#terimaModal" data-bs-whatever="{{ $loop->iteration }}"><i
+                                    class="fa fa-check-square-o" style="font-size:24px;color:white"></i></button>
                             <button href="#" type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                data-bs-target="#batalModal" data-bs-whatever="{{ $loop->iteration }}"><i class='fa fa-exclamation-circle'
-                                    style='font-size:24px;color:white'></i></button>
+                                data-bs-target="#tolakModal" data-bs-whatever="{{ $loop->iteration }}"><i
+                                    class='fa fa-exclamation-circle' style='font-size:24px;color:white'></i></button>
                             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                 data-bs-target="#detailModal" data-bs-whatever="{{ $loop->iteration }}"><i
                                     class='fa fa-search' style='font-size:24px;color:white'></i></button>
@@ -101,8 +107,16 @@
                                                         <td><b>Departemen</b></td>
                                                         <td class="modal-Dept"></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td><b>Fakultas</b></td>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="container-sm">
+                                            <table class="table table-borderless">
+                                                <tbody>
+                                                    <tr class=".d-flex">
+                                                        <td class="col-4"><b>Fakultas</b></td>
                                                         <td class="modal-Fakultas"></td>
                                                     </tr>
                                                     <tr>
@@ -113,25 +127,13 @@
                                                         <td><b>Email</b></td>
                                                         <td class="modal-Email"></td>
                                                     </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="container-sm">
-                                            <table class="table table-borderless">
-                                                <tbody>
-                                                    <tr class=".d-flex">
-                                                        <td class="col-4"><b>Divisi Pertama</b></td>
+                                                    <tr>
+                                                        <td><b>Divisi Pertama</b></td>
                                                         <td class="modal-Div1"></td>
                                                     </tr>
                                                     <tr>
                                                         <td><b>Divisi Kedua</b></td>
                                                         <td class="modal-Div2"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Kesibukan Aktif</b></td>
-                                                        <td></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -141,27 +143,43 @@
                             </div>
                         </div>
                         <div class="modal-footer justify-content-center">
-                            <button type="button" class="btn btn-danger" data-bs-target="#batalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Tolak</button>
-                            <button type="button" class="btn btn-success" data-bs-target="#terimaModal" data-bs-toggle="modal" data-bs-dismiss="modal">Terima</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            {{-- <button type="button" class="btn btn-success" data-bs-target="#terimaModal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">Terima</button> --}}
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="modal fade" id="batalModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="tolakModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">TOLAK PELAMAR</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Anda yakin ingin menolak pelamar ini?
+                            Anda yakin ingin <b>menolak</b> pelamar ini?
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-success">Ya</button>
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tidak</button>
+                            <form method="POST" action="" class="form-tolak" id="PostTolak"
+                                enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group">
+                                    <input class="tolakModal_idreg" type="hidden" id="id_registrant"
+                                        name="id_registrant" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="tolakModal_iddiv1" type="hidden" id="id_divisi_1" name="id_divisi_1"
+                                        value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="hidden" id="id_oprec" name="id_oprec" value={{$id}}>
+                                </div>
+                                <button type="submit" class="btn btn-success">Ya</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tidak</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -172,20 +190,23 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">TERIMA PELAMAR</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Anda yakin ingin menerima pelamar ini?
+                            Anda yakin ingin <b>menerima</b> pelamar ini?
                         </div>
                         <div class="modal-footer">
-                            <form method="POST" action="" class="form-terima" id="PostTerima" enctype="multipart/form-data">
+                            <form method="POST" action="" class="form-terima" id="PostTerima"
+                                enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <input class="terimaModal_idreg" type="hidden" id="id_registrant" name="id_registrant" value="">
+                                    <input class="terimaModal_idreg" type="hidden" id="id_registrant"
+                                        name="id_registrant" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="terimaModal_iddiv1" type="hidden" id="id_divisi_1" name="id_divisi_1" value="">
+                                    <input class="terimaModal_iddiv1" type="hidden" id="id_divisi_1" name="id_divisi_1"
+                                        value="">
                                 </div>
                                 <div class="form-group">
                                     <input type="hidden" id="id_oprec" name="id_oprec" value={{$id}}>
@@ -252,34 +273,64 @@
     </script>
 
     <script>
-    // JS buat terima
-    var terimaModal = document.getElementById('terimaModal')
-    terimaModal.addEventListener('show.bs.modal', function (event) {
-    // Button that triggered the modal
-    var button = event.relatedTarget
-    // Extract info from data-bs-* attributes
-    var id = button.getAttribute('data-bs-whatever')
-    // If necessary, you could initiate an AJAX request here
-    // and then do the updating in a callback.
-    
-    var data = [
-    @foreach ($registrant as $reg)
-        ["{{$reg->id}}", "{{$reg->divisi_1}}" ], 
-    @endforeach
-    ];
+        // JS buat terima
+        var terimaModal = document.getElementById('terimaModal')
+        terimaModal.addEventListener('show.bs.modal', function (event) {
+        // Button that triggered the modal
+        var button = event.relatedTarget
+        // Extract info from data-bs-* attributes
+        var id = button.getAttribute('data-bs-whatever')
+        // If necessary, you could initiate an AJAX request here
+        // and then do the updating in a callback.
+        
+        var data = [
+        @foreach ($registrant as $reg)
+            ["{{$reg->id}}", "{{$reg->divisi_1}}" ], 
+        @endforeach
+        ];
 
-    // Update the modal's content.
-    var idreg = terimaModal.querySelector('.terimaModal_idreg')
-    var iddiv1 = terimaModal.querySelector('.terimaModal_iddiv1')
-    var form_action = terimaModal.querySelector('form.form-terima')
+        // Update the modal's content.
+        var idreg = terimaModal.querySelector('.terimaModal_idreg')
+        var iddiv1 = terimaModal.querySelector('.terimaModal_iddiv1')
+        var form_action = terimaModal.querySelector('form.form-terima')
 
-    idreg.value = data[id-1][0]
-    iddiv1.value = data[id-1][1]
-    form_action.action = '/recruitments/data/'+id+'/terima'
+        idreg.value = data[id-1][0]
+        iddiv1.value = data[id-1][1]
+        form_action.action = '/recruitments/data/'+id+'/terima'
     }
 
     )
-</script>
+    </script>
+
+    <script>
+        // JS buat Tolak
+        var tolakModal = document.getElementById('tolakModal')
+        tolakModal.addEventListener('show.bs.modal', function (event) {
+        // Button that triggered the modal
+        var button = event.relatedTarget
+        // Extract info from data-bs-* attributes
+        var id = button.getAttribute('data-bs-whatever')
+        // If necessary, you could initiate an AJAX request here
+        // and then do the updating in a callback.
+
+        var data = [
+        @foreach ($registrant as $reg)
+            ["{{$reg->id}}", "{{$reg->divisi_1}}" ], 
+        @endforeach
+        ];
+
+        // Update the modal's content.
+        var idreg = tolakModal.querySelector('.tolakModal_idreg')
+        var iddiv1 = tolakModal.querySelector('.tolakModal_iddiv1')
+        var form_action = tolakModal.querySelector('form.form-tolak')
+
+        idreg.value = data[id-1][0]
+        iddiv1.value = data[id-1][1]
+        form_action.action = '/recruitments/data/'+id+'/tolak'
+    }
+
+    )
+    </script>
 
     @endsection
 

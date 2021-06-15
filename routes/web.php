@@ -46,6 +46,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('recruitments/create', [RecruitmentsController::class,'create']);
         Route::get('recruitments/data/{id}', [RecruitmentsController::class,'show']);
         Route::post('recruitments/data/{id}/terima', [RecruitmentsController::class,'terima_user']);
+        Route::post('recruitments/data/{id}/tolak', [RecruitmentsController::class,'tolak_user']);
         
         // PROFILE
         Route::get('/profile', [UsersController::class, 'index']);

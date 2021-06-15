@@ -219,6 +219,14 @@ class RecruitmentsController extends Controller
             $div2 = Division::where('id', $registrant[$i]->divisi_2)->get();
             $registrant[$i]->nmdivisi_1 = $div1[0]->nama_divisi;
             $registrant[$i]->nmdivisi_2 = $div2[0]->nama_divisi;
+
+            // $staff = Staff::where('s_nim', $registrant[$i]->nim)
+            //         ->join('events', 'staff.s_idevent', '=', 'events.id')
+            //         ->join('divisions', 'staff.s_iddivisi', '=', 'divisions.id') 
+            //         ->join('organizations', 'events.e_idormawa', '=', 'organizations.id') 
+            //         ->get();
+                    
+            // $registrant[$i]->staff = $staff;
         }
 
         // dump($registrant);
@@ -334,6 +342,18 @@ class RecruitmentsController extends Controller
                 ]);
 
         return redirect('recruitments/data/'.$request->id_oprec)->with('status', 'Pendaftar Berhasil Diterima!');
+    }
+
+    public function tolak_user(Request $request) {
+
+        // return($request);
+
+        Registrant::where('id', $request->id_registrant)
+                ->update([
+                    'status' => 0,
+                ]);
+
+        return redirect('recruitments/data/'.$request->id_oprec)->with('error', 'Pendaftar Berhasil Ditolak!');
     }
 
     #----------------------- USER / CLIENT SIDE -----------------------------------
