@@ -82,15 +82,20 @@ IPB Siawak (Sistem Informasi Anggota Ormawa dan Kepanitiaan) adalah sebuah siste
 
 ## Hasil dan pembahasan
 [`^ Kembali Keatas ^`](#)
-  * Use case diagram 
+  * Use case diagram
+    <br> 
     <img src="public/images/git/Use Case.png"/>
   * Activity diagram
+    <br>
     <img src="public/images/git/Activity Diagram.png"/>
   * Class diagram 
+    <br>
     <img src="public/images/git/Class Diagram.png"/>
   * Entity Relationship Diagram 
+    <br>
     <img src="public/images/git/ERD.png"/>
   * Arsitektur sistem 
+    <br>
     <img src="public/images/git/Arsitektur.png"/>
   * Fungsi utama yang dikembangkan
   * Fungsi CRUD
@@ -105,8 +110,31 @@ IPB Siawak (Sistem Informasi Anggota Ormawa dan Kepanitiaan) adalah sebuah siste
 
 ## Developer dan job desc
 [`^ Kembali Keatas ^`](#)
+### Project Manager 
 
+| Nama                 | NIM           |
+| -------------------- |:-------------:| 
+| Berly Setiawan       | G64180044     |
 
+### Frontend Developer
+
+| Nama                    | NIM           | Job Desk                     |
+| ----------------------- |:-------------:| :----------------------------|
+| Berly Setiawan          | G64180044     |           |
+| Cristmas Anggario       | G64180058     |           |
+| Arrazzaq Adrian         | G64180109     |           |
+| Yudha Berliandi         | G64180110     |           |
+| Denny Lindawati Sinurat | G64180103     |           |
+
+### Backend Developer
+
+| Nama                    | NIM           | Job Desk                     |
+| ----------------------- |:-------------:| :----------------------------|
+| Berly Setiawan          | G64180044     |  |
+| Cristmas Anggario       | G64180058     |  |
+| Arrazzaq Adrian         | G64180109     |  |
+| Yudha Berliandi         | G64180110     |  |
+| Denny Lindawati Sinurat | G64180103     |  |
 
 <br><br><br>
 
