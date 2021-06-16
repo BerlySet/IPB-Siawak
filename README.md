@@ -182,6 +182,7 @@ Penerapan pada sistem :
 
 ## Saran untuk pengembangan selanjutnya
 [`^ Kembali Keatas ^`](#)      
+Pengembangan sistem SIAWAK ini bertujuan untuk memenuhi tugas akhir mata kuliah Pengembangan Sistem Berorientasi Objek dan merancang sistem pendaftaran serta keanggotaan Ormawa/kepanitiaan di IPB. Keterbatasan waktu dan keahlain pengembangan sistem yang berbeda antar anggota menjadi tantangan dalam perjalanan proyek ini. Pemilihan divisi yang belum bisa sesuai keingininan pengguna, tampilan pengguna yang masih sederhana, dan kurang responsivnya website merupakan beberapa hal yang bisa menjadi pengembangan tahap selanjutnya.
 
 
 ## Developer dan job desc
