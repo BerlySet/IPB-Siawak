@@ -230,11 +230,7 @@ Pengembangan sistem SIAWAK ini bertujuan untuk memenuhi tugas akhir mata kuliah 
 
 | Nama                    | NIM           | Job Desk                     |
 | ----------------------- |:-------------:| :----------------------------|
-| Berly Setiawan          | G64180044     |  Semuanya|
-| Cristmas Anggario       | G64180058     |  |
-| Arrazzaq Adrian         | G64180109     |  |
-| Yudha Berliandi         | G64180110     |  |
-| Denny Lindawati Sinurat | G64180103     |  |
+| Berly Setiawan          | G64180044     |  Sistem tabel  |
 
 <br><br><br>
 
