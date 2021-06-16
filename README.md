@@ -97,6 +97,38 @@ Aplikasi yang dirancang adalah sistem aplikasi berbasis web. Web IPB Siawak memi
 
 Dalam mengembangkan IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan), kelompok kami menggunakan design pattern MVC (Model View Controller) yang dimana design pattern ini membagi suatu aplikasi menjadi tiga bagian yang saling terhubung yaitu model (database), view (tampilan/ui) dan controller (interaksi model dan view). 
 
+#### Model
+	Model bertanggung jawab untuk mengambil data dan mengubahnya menjadi data yang lebih bermakna yang dapat dikelola oleh lapisan aplikasi yang lain dan mengirimkannya kembali ke lapisan yang sesuai.
+
+Penerapan pada sistem :
+
+1.	Model Ketua Ormawa : Pada model ketua ormawa terdapat informasi mengenai nama dan nim ketua ormawa di IPB University yang akan dibutuhkan ketika ketua ormawa tersebut akan membuka open recruitment dan hal lainnya di IPB Siawak
+2.	Model Mahasiswa : Pada model mahasiswa terdapat informasi mengenai nama dan nim mahasiswa pendaftar yang dibutuhkan ketika mahasiswa akan melakukan pendaftaran
+3.	Model Penerimaan Anggota : Pada model penerimaan anggota terdapat informasi mengenai penerimaan anggota yang dilakukan oleh ketua ormawa dan informasi pelamar
+4.	Model Jenis Pendaftaran (Kepanitiaan dan Ormawa) : Pada model jenis Pendaftaran terdapat format informasi yang akan diiisi oleh pendaftar/pelamar
+	
+
+#### View
+    View mendefinisikan dengan tepat apa yang disajikan kepada pengguna. Biasanya, Controller meneruskan data ke setiap Tampilan. Tampilan juga mengumpulkan data dari pengguna. Di sini kami menggunakan bahasa pemrograman PHP untuk tampilan.
+
+Penerapan di sistem : 
+
+1. Landing Page
+    View landing page merupakan tampilan awal dari web IPB Siawak, view ini menampilkan kata mulai sekarang, logo IPB Siawak, serta pilihan untuk login.
+2. Login Page
+    View login page menampilkan format yang harus diisi oleh pengguna (ketua ormawa dan mahasiswa) yaitu email IPB pengguna dan kata sandi.
+3. Pendaftaran Ormawa/Kepanitiaan 
+    View pendaftaran ormawa/kepanitiaan menampilkan informasi terkait ormawa/kepanitiaan yang sedang oprec. 
+5.	Penerimaan anggota   
+    View penerimaan anggota menampilkan informasi pendaftar yang akan diseleksi
+
+#### Controller 
+    Controller merupakan bagian yang menjembatani model dan view. Controller berisi perintah-perintah yang berfungsi untuk memproses suatu data dan mengirimkannya ke halaman web.
+Penerapan pada sistem :
+1.	Auth Controller Auth controller digunakan untuk mengatur autentikasi saat login sehingga hanya yang menjadi admin yang bisa mengakses sistem perpustakaan
+2.	Controller untuk setiap model
+
+
 ## Hasil dan pembahasan
 [`^ Kembali Keatas ^`](#)
   * Use case diagram
@@ -158,6 +190,8 @@ Dalam mengembangkan IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan)
 | Denny Lindawati Sinurat | G64180103     |  |
 
 <br><br><br>
+
+
 
 # Akun Dummy
 `Akun Ketua`
