@@ -140,6 +140,15 @@
                                     <option>Medbrand</option>
                                     <option>Riset</option>
                                     <option>Edukasi</option>
+                                    <option>Acara</option>
+                                    <option>Humas</option>
+                                    <option>Komsumsi</option>
+                                    <option>Fasilitator</option>
+                                    <option>Logstran</option>
+                                    <option>Entrepreneurship</option>
+                                    <option>LO</option>
+                                    <option>Kesehatan</option>
+                                    <option>Keamanan</option>
                                 </select>
                             </div>
                         </div>
