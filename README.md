@@ -176,6 +176,25 @@ Penerapan pada sistem :
       Ketua acara dapat mengisi SKPI dari suatu acara agar anggota tidak perlu mengisi SKPI secara manual.
        
   #### Fungsi CRUD
+    1. CREATE
+- Mahasiswa (User) dapat mendaftar Open Recruitment yang sedang dibuka dengan memasukan kedua divisi pilihannya.
+- Ketua Ormawa (Admin) dapat membuat Recruitment baru dengan memasukan judul, event, tahun akademik, kategori, kriteria pendaftar serta divisi tersedia.
+- Ketua Ormawa (Admin) dapat menerima seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
+- Ketua Ormawa (Admin) dapat mengisi data untuk SKPI dengan atribut learning hour, level kegiatan, tanggal kegiatan, soft skills, nama pembimbing, serta dokumen SK.
+ 
+    2. READ
+- Mahasiswa (User) dapat melihat riwayat pendaftaran kepanitiaan / kepengurusan yang telah dilakukan sebelumnya
+- Mahasiswa (User) dapat melihat data diri dan status keanggotaan aktifnya
+- Ketua Ormawa (Admin) dapat melihat pendaftar dari Recruitment yang telah ia buat sebelumnya.
+- Ketua Ormawa (Admin) dapat melihat anggota dari Event yang telah selesai perekrutannya.
+
+    3. UPDATE
+- Ketua Ormawa (Admin) dapat memindahkan seorang pengurus dari divisi lamanya ke divisi yang lain serta memindahkan jabatannya.
+- Ketua Ormawa (Admin) dapat menonaktifkan keanggotaan seorang pengurus.
+
+    4. DELETE
+- Ketua Ormawa (Admin) dapat menolak seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
+
 
 ## Hasil implementasi
 [`^ Kembali Keatas ^`](#)
