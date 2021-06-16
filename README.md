@@ -199,10 +199,10 @@ Penerapan pada sistem :
 ## Hasil implementasi
 [`^ Kembali Keatas ^`](#)
  
- * Screenshot sistem
- #### Landing Page
+ ### Screenshot sistem
+  #### Landing Page
    <br>
-   <img src="public/images/SS sistem/1.png"/>
+   <img src="public/images/SS Sistem/1.png"/>
    
   #### Login Page
    <br>
@@ -222,7 +222,7 @@ Penerapan pada sistem :
    
  #### Profile
    <br>
-   <img src="public/images/SS sistem/7.png"/>
+   <img src="public/images/SS Sistem/7.png"/>
    
   #### Dashboard User
    <br>
@@ -260,7 +260,7 @@ Pengembangan sistem SIAWAK ini bertujuan untuk memenuhi tugas akhir mata kuliah 
 | Nama                    | NIM           | Job Desk                     |
 | ----------------------- |:-------------:| :----------------------------|
 | Berly Setiawan          | G64180044     |    Sertifikat dan profil  |
-| Cristmas Anggario       | G64180058     |    Keanggotaan            |
+| Cristmas Anggario       | G64180058     |    Landing page , Keanggotaan dan Dashboard           |
 | Arrazzaq Adrian         | G64180109     |    Open Recruitment       |
 | Yudha Berliandi         | G64180110     |    Dashbord dan Login     |
 | Denny Lindawati Sinurat | G64180103     |   Laporan dan Dokumentasi    |
