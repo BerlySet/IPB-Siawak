@@ -74,10 +74,26 @@ Aplikasi yang dirancang adalah sistem aplikasi berbasis web. Web IPB Siawak memi
 ## Spesifikasi teknis lingkungan pengembangan
 [`^ Kembali Keatas ^`](#)
 
-  * Software
-  * Hardware
-  * Tech Stack
- 
+  ### Software
+   - Visual Studio Code 1.56.2
+   - Github
+   - Git Bash 2.32.0
+   - Trello
+   - Composer 2.1.3
+   - Figma
+   - XAMPP 8.0.6
+   - MAMP 8.0.7
+   - Draw.io
+  
+  ### Hardware
+   - AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx (8 CPUs), ~2.1GHz
+   - 8 GB RAM
+   
+  ### Tech Stack
+   - Laravel 8.16.1
+   - Bootstrap v5.0.1
+   - MySQL 8.0.25
+  
 ## Konsep OOP yang digunakan
 [`^ Kembali Keatas ^`](#) 
 #### 1.	Abstrak Class
