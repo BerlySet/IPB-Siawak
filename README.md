@@ -86,8 +86,9 @@ Aplikasi yang dirancang adalah sistem aplikasi berbasis web. Web IPB Siawak memi
   * Proses enkapsulation memudahkan kita untuk menggunakan sebuah objek dari suatu kelas karena kita tidak perlu mengetahui segala hal secara rinci.
 
 ## Tipe desain pengembangan yang digunakan (Pattern/Anti Pattern)
-[`^ Kembali Keatas ^`](#)      
+[`^ Kembali Keatas ^`](#)  
 
+Dalam mengembangkan IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan), kelompok kami menggunakan design pattern MVC (Model View Controller) yang dimana design pattern ini membagi suatu aplikasi menjadi tiga bagian yang saling terhubung yaitu model (database), view (tampilan/ui) dan controller (interaksi model dan view). 
 
 ## Hasil dan pembahasan
 [`^ Kembali Keatas ^`](#)
