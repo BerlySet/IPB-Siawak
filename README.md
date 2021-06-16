@@ -70,6 +70,13 @@ IPB Siawak (Sistem Informasi Anggota Ormawa dan Kepanitiaan) adalah sebuah siste
 [`^ Kembali Keatas ^`](#)
 
 Aplikasi yang dirancang adalah sistem aplikasi berbasis web. Web IPB Siawak memiliki  fitur pencatatan anggota ormawa, menampilkan ormawa dan kepanitiaan yang sedang  oprec. Web IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan) disimpan dalam database dengan operasi insert, delete, dan view data yang ditampilkan dalam web. Data yang di input berdasarkan mahasiswa yang melakukan pendaftaran sehingga datanya pun tersimpan di dalam database.
+
+## Spesifikasi teknis lingkungan pengembangan
+[`^ Kembali Keatas ^`](#)
+
+  * Software
+  * Hardware
+  * Tech Stack
  
 ## Konsep OOP yang digunakan
 [`^ Kembali Keatas ^`](#) 
