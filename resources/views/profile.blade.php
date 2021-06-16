@@ -7,7 +7,7 @@
 <div class="overflow-auto w-100">
     <div class=".d-flex flex-column mx-5 my-3">
         <div class="container my-3">
-            <h2>Profile</h2>
+            <h2><b>Profile</b></h2>
 
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
             <div class="container mt-3">
