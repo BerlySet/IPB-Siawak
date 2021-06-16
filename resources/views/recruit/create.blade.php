@@ -76,7 +76,7 @@
                                     <label for="kriteria_pendaftar" class="col-sm-1 col-form-label"><b>Kriteria Pendaftar</b></label>
                                 </div>
                                 <div class="col-sm-8">
-                                <input type="text" class="form-control" id="kriteria" placeholder="Masukan Kriteria yang dibutuhkan" rows="2" name="kriteria_pendaftar">
+                                <textarea id="kriteria" rows="4" cols="50" name="comment" form="usrform" placeholder="Masukan Kriteria yang dibutuhkan" name="kriteria_pendaftar"></textarea>
                                 </div>
                             </div>
                             @error('kriteria_pendaftar')
