@@ -9,7 +9,7 @@
             <h2 class="container">New Open Recruitment Form</h2>
             <div class="container">Isi segala ketentuan pendaftaran kepanitiaan/keanggotaan dengan teliti.</div>
 
-            <form method="POST" action="/recruitments/create" enctype="multipart/form-data">
+            <form method="POST" action="/recruitments/create" enctype="multipart/form-data" id="form-daftar">
                 @csrf
                 <div class="form-group row, d-flex my-2">
                     <label for="Judul" class="col-sm-2 col-form-label"><b>Judul</b></label>
@@ -76,7 +76,7 @@
                                     <label for="kriteria_pendaftar" class="col-sm-1 col-form-label"><b>Kriteria Pendaftar</b></label>
                                 </div>
                                 <div class="col-sm-8">
-                                <textarea id="kriteria" rows="4" cols="50" name="comment" form="usrform" placeholder="Masukan Kriteria yang dibutuhkan" name="kriteria_pendaftar"></textarea>
+                                <textarea form="form-daftar" id="kriteria" rows="4" cols="50" placeholder="Masukan Kriteria yang dibutuhkan" name="kriteria_pendaftar"></textarea>
                                 </div>
                             </div>
                             @error('kriteria_pendaftar')
