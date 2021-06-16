@@ -6,7 +6,7 @@
 <div class="overflow-auto w-100">
     <div class=".d-flex mx-5 my-3">
         <div class="container">
-            <h2 class="container">Recruitments</h2>
+            <h2 class="container"><b>Recruitments</b></h2>
             <div class="container">Data pembukaan pendaftaran yang telah dibuat </div>
 
             @if (session('status'))

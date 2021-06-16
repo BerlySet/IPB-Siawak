@@ -6,7 +6,7 @@
 <div class="overflow-auto w-100">
   <div class=".d-flex mx-5 my-3">
     <div class="container">
-      <h2 class="container">Anggota</h2>
+      <h2 class="container"><b>Anggota</b></h2>
       <div class="container">Acara Yang Sedang Berlangsung</div>
       <table class="table my-3">
         <thead class="table-info">
