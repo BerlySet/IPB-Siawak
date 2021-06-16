@@ -30,6 +30,10 @@
                                 <td class="col-3"><b>Kategori</b></td>
                                 <td class="col-5">{{ $rec[0]->kategori }}</td>
                             </tr>
+                            <tr class="d-flex">
+                                <td class="col-3"><b>Kriteria Pendaftar</b></td>
+                                <td class="col-5">{{ $rec[0]->kriteria_pendaftar }}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
