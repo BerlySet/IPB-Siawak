@@ -110,7 +110,7 @@ Dalam mengembangkan IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan)
     <img src="public/images/git/Class Diagram New.png"/>
   * Entity Relationship Diagram 
     <br>
-    <img src="public/images/git/ERD.png"/>
+    <img src="public/images/git/ERD New.png"/>
   * Arsitektur sistem 
     <br>
     <img src="public/images/git/Arsitektur.png"/>
