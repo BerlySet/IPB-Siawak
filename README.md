@@ -228,7 +228,7 @@ Penerapan pada sistem :
    <br>
    <img src="public/images/SS Sistem/8.png"/>
    
-  #### Open Recruitments 
+  #### Open Recruitments User
    <br>
    <img src="public/images/SS Sistem/9.png"/>
    
@@ -236,7 +236,7 @@ Penerapan pada sistem :
    <br>
    <img src="public/images/SS Sistem/10.png"/>
    
-  #### Profile
+  #### Profile User
    <br>
    <img src="public/images/SS Sistem/11.png"/>
   
