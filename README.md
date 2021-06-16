@@ -147,29 +147,29 @@ Penerapan pada sistem :
 ## Hasil dan pembahasan
 [`^ Kembali Keatas ^`](#)
   ### Use case diagram
-    <br>
-    <img src="public/images/git/Use Case.png"/>
+   <br>
+   <img src="public/images/git/Use Case.png"/>
   ### Activity diagram
-    <br>
-    <img src="public/images/git/Activity Diagram.png"/>
+   <br>
+   <img src="public/images/git/Activity Diagram.png"/>
   ### Class diagram 
-    <br>
-    <img src="public/images/git/Class Diagram New.png"/>
+   <br>
+   <img src="public/images/git/Class Diagram New.png"/>
   ### Entity Relationship Diagram 
-    <br>
-    <img src="public/images/git/ERD New.png"/>
+   <br>
+   <img src="public/images/git/ERD New.png"/>
   ### Arsitektur sistem 
-    <br>
-    <img src="public/images/git/Arsitektur.png"/>
+   <br>
+   <img src="public/images/git/Arsitektur.png"/>
     
   ### Fungsi utama yang dikembangkan
-    1. Fungsi Open Recruitment
-       Ketua acara dapat membuka open recruitment baru dengan menekan tombol open recruitment dan mengisi ketentuan pendaftaran dari acara yang akan dibuat, lalu ketua juga          dapat langsung menerima atau menolak pendaftar agar dapat disimpan kedalam sistem, ketua juga dapat menekan tombol inspect untuk melihat informasi dari pendaftar. 
-       Pendaftar dapat melakukan daftar dengan cara menekan tombol Daftar pada oprec yang sedang berlangsung.
-    2. Fungsi Members
-       Ketua acara dapat mengedit Status , divisi , dan posisi dari anggota acara tersebut.
-    3. Fungsi SKPI
-       Ketua acara dapat mengisi SKPI dari suatu acara agar anggota tidak perlu mengisi SKPI secara manual.
+   1. Fungsi Open Recruitment
+      Ketua acara dapat membuka open recruitment baru dengan menekan tombol open recruitment dan mengisi ketentuan pendaftaran dari acara yang akan dibuat, lalu ketua juga         dapat langsung menerima atau menolak pendaftar agar dapat disimpan kedalam sistem, ketua juga dapat menekan tombol inspect untuk melihat informasi dari pendaftar. 
+      Pendaftar dapat melakukan daftar dengan cara menekan tombol Daftar pada oprec yang sedang berlangsung.
+   2. Fungsi Members
+      Ketua acara dapat mengedit Status , divisi , dan posisi dari anggota acara tersebut.
+   3. Fungsi SKPI
+      Ketua acara dapat mengisi SKPI dari suatu acara agar anggota tidak perlu mengisi SKPI secara manual.
        
   ### Fungsi CRUD
 
