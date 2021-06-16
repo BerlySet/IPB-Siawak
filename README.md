@@ -224,7 +224,7 @@ Pengembangan sistem SIAWAK ini bertujuan untuk memenuhi tugas akhir mata kuliah 
 | Cristmas Anggario       | G64180058     |    Keanggotaan            |
 | Arrazzaq Adrian         | G64180109     |    Open Recruitment       |
 | Yudha Berliandi         | G64180110     |    Dashbord dan Login     |
-| Denny Lindawati Sinurat | G64180103     |      Laporan     |
+| Denny Lindawati Sinurat | G64180103     |   Laporan dan Dokumentasi    |
 
 ### Backend Developer
 
