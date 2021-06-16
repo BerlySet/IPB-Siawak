@@ -138,9 +138,6 @@ Dalam mengembangkan IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan)
   
   ### Link aplikasi (jika sudah di deploy)
 
-## Saran untuk pengembangan selanjutnya
-[`^ Kembali Keatas ^`](#)   
-
 ## Developer dan job desc
 [`^ Kembali Keatas ^`](#)
 ### Project Manager 
