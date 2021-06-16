@@ -99,7 +99,7 @@
                                                 <div class="form-group">
                                                     <div class="custom-control custom-checkbox">
                                                         <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox"/>
-                                                        <label class="custom-control-label" for="rememberPasswordCheck"><b>Ingat Password?</b></label>
+                                                        <label class="custom-control-label" for="rememberPasswordCheck"><b>Ingat Saya?</b></label>
                                                     </div>
                                                 </div>
                                                 
