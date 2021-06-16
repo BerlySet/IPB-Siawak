@@ -6,7 +6,7 @@
 @section('container')
 <div class="overflow-auto w-100">
   <div class=".d-flex mx-5 my-3">
-    <h2>Surat Keterangan Pendamping Ijazah</h2>
+    <h2><b>Surat Keterangan Pendamping Ijazah</b></h2>
     <p>Mengisi satu form untuk semua, batas pengisian maksimal 1 bulan setelah semester selesai.</p>
     @if (session('status'))
     <div class="alert alert-success">
