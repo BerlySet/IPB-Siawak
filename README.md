@@ -177,23 +177,23 @@ Penerapan pada sistem :
        
   #### Fungsi CRUD
   1. CREATE
-    - Mahasiswa (User) dapat mendaftar Open Recruitment yang sedang dibuka dengan memasukan kedua divisi pilihannya.
-    - Ketua Ormawa (Admin) dapat membuat Recruitment baru dengan memasukan judul, event, tahun akademik, kategori, kriteria pendaftar serta divisi tersedia.
-    - Ketua Ormawa (Admin) dapat menerima seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
-    - Ketua Ormawa (Admin) dapat mengisi data untuk SKPI dengan atribut learning hour, level kegiatan, tanggal kegiatan, soft skills, nama pembimbing, serta dokumen SK.
+- Mahasiswa (User) dapat mendaftar Open Recruitment yang sedang dibuka dengan memasukan kedua divisi pilihannya.
+- Ketua Ormawa (Admin) dapat membuat Recruitment baru dengan memasukan judul, event, tahun akademik, kategori, kriteria pendaftar serta divisi tersedia.
+- Ketua Ormawa (Admin) dapat menerima seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
+- Ketua Ormawa (Admin) dapat mengisi data untuk SKPI dengan atribut learning hour, level kegiatan, tanggal kegiatan, soft skills, nama pembimbing, serta dokumen SK.
  
   2. READ
-    - Mahasiswa (User) dapat melihat riwayat pendaftaran kepanitiaan / kepengurusan yang telah dilakukan sebelumnya
-    - Mahasiswa (User) dapat melihat data diri dan status keanggotaan aktifnya
-    - Ketua Ormawa (Admin) dapat melihat pendaftar dari Recruitment yang telah ia buat sebelumnya.
-    - Ketua Ormawa (Admin) dapat melihat anggota dari Event yang telah selesai perekrutannya.
+- Mahasiswa (User) dapat melihat riwayat pendaftaran kepanitiaan / kepengurusan yang telah dilakukan sebelumnya
+- Mahasiswa (User) dapat melihat data diri dan status keanggotaan aktifnya
+- Ketua Ormawa (Admin) dapat melihat pendaftar dari Recruitment yang telah ia buat sebelumnya.
+- Ketua Ormawa (Admin) dapat melihat anggota dari Event yang telah selesai perekrutannya.
 
   3. UPDATE
-    - Ketua Ormawa (Admin) dapat memindahkan seorang pengurus dari divisi lamanya ke divisi yang lain serta memindahkan jabatannya.
-    - Ketua Ormawa (Admin) dapat menonaktifkan keanggotaan seorang pengurus.
+- Ketua Ormawa (Admin) dapat memindahkan seorang pengurus dari divisi lamanya ke divisi yang lain serta memindahkan jabatannya.
+- Ketua Ormawa (Admin) dapat menonaktifkan keanggotaan seorang pengurus.
 
   4. DELETE
-    - Ketua Ormawa (Admin) dapat menolak seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
+- Ketua Ormawa (Admin) dapat menolak seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
 
 
 ## Hasil implementasi
@@ -220,17 +220,17 @@ Pengembangan sistem SIAWAK ini bertujuan untuk memenuhi tugas akhir mata kuliah 
 
 | Nama                    | NIM           | Job Desk                     |
 | ----------------------- |:-------------:| :----------------------------|
-| Berly Setiawan          | G64180044     |           |
-| Cristmas Anggario       | G64180058     |           |
-| Arrazzaq Adrian         | G64180109     |           |
-| Yudha Berliandi         | G64180110     |           |
-| Denny Lindawati Sinurat | G64180103     |           |
+| Berly Setiawan          | G64180044     |    Sertifikat dan profil  |
+| Cristmas Anggario       | G64180058     |    Anggotaa               |
+| Arrazzaq Adrian         | G64180109     |    Open Recruitment       |
+| Yudha Berliandi         | G64180110     |    Dashbord dan Login     |
+| Denny Lindawati Sinurat | G64180103     |      Laporan     |
 
 ### Backend Developer
 
 | Nama                    | NIM           | Job Desk                     |
 | ----------------------- |:-------------:| :----------------------------|
-| Berly Setiawan          | G64180044     |  |
+| Berly Setiawan          | G64180044     |  Semuanya|
 | Cristmas Anggario       | G64180058     |  |
 | Arrazzaq Adrian         | G64180109     |  |
 | Yudha Berliandi         | G64180110     |  |
