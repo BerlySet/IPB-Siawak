@@ -146,23 +146,27 @@ Penerapan pada sistem :
 
 ## Hasil dan pembahasan
 [`^ Kembali Keatas ^`](#)
-  ### Use case diagram
+  #### Use case diagram
    <br>
    <img src="public/images/git/Use Case.png"/>
-  ### Activity diagram
+   
+  #### Activity diagram
    <br>
    <img src="public/images/git/Activity Diagram.png"/>
-  ### Class diagram 
+   
+  #### Class diagram 
    <br>
    <img src="public/images/git/Class Diagram New.png"/>
-  ### Entity Relationship Diagram 
+   
+  #### Entity Relationship Diagram 
    <br>
    <img src="public/images/git/ERD New.png"/>
-  ### Arsitektur sistem 
+   
+  #### Arsitektur sistem 
    <br>
    <img src="public/images/git/Arsitektur.png"/>
     
-  ### Fungsi utama yang dikembangkan
+  #### Fungsi utama yang dikembangkan
    1. Fungsi Open Recruitment
       Ketua acara dapat membuka open recruitment baru dengan menekan tombol open recruitment dan mengisi ketentuan pendaftaran dari acara yang akan dibuat, lalu ketua juga         dapat langsung menerima atau menolak pendaftar agar dapat disimpan kedalam sistem, ketua juga dapat menekan tombol inspect untuk melihat informasi dari pendaftar. 
       Pendaftar dapat melakukan daftar dengan cara menekan tombol Daftar pada oprec yang sedang berlangsung.
@@ -171,7 +175,7 @@ Penerapan pada sistem :
    3. Fungsi SKPI
       Ketua acara dapat mengisi SKPI dari suatu acara agar anggota tidak perlu mengisi SKPI secara manual.
        
-  ### Fungsi CRUD
+  #### Fungsi CRUD
 
 ## Hasil implementasi
 [`^ Kembali Keatas ^`](#)
