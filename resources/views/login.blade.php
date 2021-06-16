@@ -9,6 +9,7 @@
         <meta name="description" content=""/>
         <meta name="author" content=""/>
         <title>Login - IPB Siawak</title>
+        <link rel="icon" href="{!! asset('images/image1.png') !!}"/>
         <link
             rel="stylesheet" 
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
