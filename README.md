@@ -221,7 +221,7 @@ Pengembangan sistem SIAWAK ini bertujuan untuk memenuhi tugas akhir mata kuliah 
 | Nama                    | NIM           | Job Desk                     |
 | ----------------------- |:-------------:| :----------------------------|
 | Berly Setiawan          | G64180044     |    Sertifikat dan profil  |
-| Cristmas Anggario       | G64180058     |    Anggotaa               |
+| Cristmas Anggario       | G64180058     |    Keanggotaan            |
 | Arrazzaq Adrian         | G64180109     |    Open Recruitment       |
 | Yudha Berliandi         | G64180110     |    Dashbord dan Login     |
 | Denny Lindawati Sinurat | G64180103     |      Laporan     |
@@ -230,9 +230,9 @@ Pengembangan sistem SIAWAK ini bertujuan untuk memenuhi tugas akhir mata kuliah 
 
 | Nama                    | NIM           | Job Desk                     |
 | ----------------------- |:-------------:| :----------------------------|
-| Berly Setiawan          | G64180044     |  Sistem tabel  |
+| Berly Setiawan          | G64180044     |  Sistem Database  |
 
-<br><br><br>
+<br>
 
 
 
