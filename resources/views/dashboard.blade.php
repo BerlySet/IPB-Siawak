@@ -6,7 +6,7 @@
 <div class="overflow-auto w-100">
     <div class=".d-flex mx-5 my-3">
         <div class="container">
-        <h2 class="container">Dashboard</h2>
+        <h2 class="container"><b>Dashboard</b></h2>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12" style="padding:10px 15px 10px; border: 1px solid Lightgray; margin-bottom:10px;">
