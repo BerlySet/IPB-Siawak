@@ -200,6 +200,45 @@ Penerapan pada sistem :
 [`^ Kembali Keatas ^`](#)
  
  * Screenshot sistem
+ #### Landing Page
+   <br>
+   <img src="public/images/SS sistem/1.png"/>
+   
+  #### Login Page
+   <br>
+   <img src="public/images/SS Sistem/2.png"/>
+   
+  #### Dashboard 
+   <br>
+   <img src="public/images/SS Sistem/3.png"/>
+   
+  #### Anggota
+   <br>
+   <img src="public/images/SS Sistem/5.png"/>
+   
+  #### SKPI
+   <br>
+   <img src="public/images/SS Sistem/6.png"/>
+   
+ #### Profile
+   <br>
+   <img src="public/images/SS sistem/7.png"/>
+   
+  #### Dashboard User
+   <br>
+   <img src="public/images/SS Sistem/8.png"/>
+   
+  #### Open Recruitments 
+   <br>
+   <img src="public/images/SS Sistem/9.png"/>
+   
+  #### History
+   <br>
+   <img src="public/images/SS Sistem/10.png"/>
+   
+  #### Profile
+   <br>
+   <img src="public/images/SS Sistem/11.png"/>
   
  * Link aplikasi (jika sudah di deploy)
 
