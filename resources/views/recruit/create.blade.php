@@ -115,7 +115,7 @@
                         <div class="row g-3 align-items-center">
                             <div class="input-group mb-3">
                                 <div class="col-2">
-                                    <label for="divisi[]" class="col-form-label"><b>Pilihan Divisi Pertama</b></label>
+                                    <label for="divisi[]" class="col-form-label"><b>Pilihan Divisi</b></label>
                                 </div>
                                 <select id="divisi[]"
                                     class="selectpicker form-control @error('divisi[]') is-invalid @enderror"
@@ -148,43 +148,6 @@
                         @enderror
                     </div>
                     
-                    <div class="form-group">
-                        <div class="row g-3 align-items-center">
-                            <div class="input-group mb-3">
-                                <div class="col-2">
-                                    <label for="divisi[]" class="col-form-label"><b>Pilihan Divisi Kedua</b></label>
-                                </div>
-                                <select id="divisi[]"
-                                    class="selectpicker form-control @error('divisi[]') is-invalid @enderror"
-                                    multiple data-live-search="true" name="divisi[]">
-                                    <option>PSDM</option>
-                                    <option>Akpres</option>
-                                    <option>Senbud</option>
-                                    <option>DPOR</option>
-                                    <option>DKV</option>
-                                    <option>HRD</option>
-                                    <option>Kebijakan Kampus</option>
-                                    <option>Kebijakan Nasional</option>
-                                    <option>Kebijakan Daerah</option>
-                                    <option>Kebijakan Agrikompleks</option>
-                                    <option>Kajian Aksi dan Propaganda</option>
-                                    <option>Adkesmah</option>
-                                    <option>Sosmas</option>
-                                    <option>Perdes</option>
-                                    <option>LH</option>
-                                    <option>Internal</option>
-                                    <option>Eksternal</option>
-                                    <option>Medbrand</option>
-                                    <option>Riset</option>
-                                    <option>Edukasi</option>
-                                </select>
-                            </div>
-                        </div>
-                        @error('divisi[]')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-
                 <div style = "position:relative; left: 350px;">
                     <a href="/recruitments" class="btn btn-danger">Cancel</a>
                     <button type="submit" class="btn btn-primary">Kirim</button>
