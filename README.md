@@ -177,10 +177,10 @@ Penerapan pada sistem :
        
   #### Fungsi CRUD
   1. CREATE
-    a. Mahasiswa (User) dapat mendaftar Open Recruitment yang sedang dibuka dengan memasukan kedua divisi pilihannya.
-    b. Ketua Ormawa (Admin) dapat membuat Recruitment baru dengan memasukan judul, event, tahun akademik, kategori, kriteria pendaftar serta divisi tersedia.
-    c. Ketua Ormawa (Admin) dapat menerima seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
-    d. Ketua Ormawa (Admin) dapat mengisi data untuk SKPI dengan atribut learning hour, level kegiatan, tanggal kegiatan, soft skills, nama pembimbing, serta dokumen SK.
+        - Mahasiswa (User) dapat mendaftar Open Recruitment yang sedang dibuka dengan memasukan kedua divisi pilihannya.
+        - Ketua Ormawa (Admin) dapat membuat Recruitment baru dengan memasukan judul, event, tahun akademik, kategori, kriteria pendaftar serta divisi tersedia.
+        - Ketua Ormawa (Admin) dapat menerima seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
+        - Ketua Ormawa (Admin) dapat mengisi data untuk SKPI dengan atribut learning hour, level kegiatan, tanggal kegiatan, soft skills, nama pembimbing, serta dokumen SK.
  
   2. READ
     a. Mahasiswa (User) dapat melihat riwayat pendaftaran kepanitiaan / kepengurusan yang telah dilakukan sebelumnya
