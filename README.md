@@ -117,14 +117,14 @@ Dalam mengembangkan IPB SIAWAK (Sistem Informasi Anggota Ormawa dan Kepanitiaan)
 
 Penerapan pada sistem :
 
-1.	Model Ketua Ormawa : Pada model ketua ormawa terdapat informasi mengenai nama dan nim ketua ormawa di IPB University yang akan dibutuhkan ketika ketua ormawa tersebut akan membuka open recruitment dan hal lainnya di IPB Siawak
-2.	Model Mahasiswa : Pada model mahasiswa terdapat informasi mengenai nama dan nim mahasiswa pendaftar yang dibutuhkan ketika mahasiswa akan melakukan pendaftaran
+1.	Model Ketua Ormawa : Pada model ketua ormawa terdapat informasi mengenai nama, nim ketua ormawa serta data lainnya di IPB University yang akan dibutuhkan ketika ketua ormawa tersebut akan membuka open recruitment dan hal lainnya di IPB Siawak
+2.	Model Mahasiswa : Pada model mahasiswa terdapat informasi mengenai nama, nim, hingga email mahasiswa pendaftar yang dibutuhkan ketika mahasiswa akan melakukan pendaftaran
 3.	Model Penerimaan Anggota : Pada model penerimaan anggota terdapat informasi mengenai penerimaan anggota yang dilakukan oleh ketua ormawa dan informasi pelamar
 4.	Model Jenis Pendaftaran (Kepanitiaan dan Ormawa) : Pada model jenis Pendaftaran terdapat format informasi yang akan diiisi oleh pendaftar/pelamar
 	
 
 #### View
-   View mendefinisikan dengan tepat apa yang disajikan kepada pengguna. Biasanya, Controller meneruskan data ke setiap Tampilan. Tampilan juga mengumpulkan data dari pengguna. Di sini kami menggunakan bahasa pemrograman PHP untuk tampilan.
+   View mendefinisikan dengan tepat apa yang disajikan kepada pengguna. Biasanya, Controller meneruskan data ke setiap Tampilan. Tampilan juga mengumpulkan data dari pengguna. Di sini kami menggunakan bahasa pemrograman PHP (blade) untuk tampilan.
 
 Penerapan di sistem : 
 
@@ -177,23 +177,23 @@ Penerapan pada sistem :
        
   #### Fungsi CRUD
   1. CREATE
-    - Mahasiswa (User) dapat mendaftar Open Recruitment yang sedang dibuka dengan memasukan kedua divisi pilihannya.
-    - Ketua Ormawa (Admin) dapat membuat Recruitment baru dengan memasukan judul, event, tahun akademik, kategori, kriteria pendaftar serta divisi tersedia.
-    - Ketua Ormawa (Admin) dapat menerima seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
-    - Ketua Ormawa (Admin) dapat mengisi data untuk SKPI dengan atribut learning hour, level kegiatan, tanggal kegiatan, soft skills, nama pembimbing, serta dokumen SK.
+    a. Mahasiswa (User) dapat mendaftar Open Recruitment yang sedang dibuka dengan memasukan kedua divisi pilihannya.
+    b. Ketua Ormawa (Admin) dapat membuat Recruitment baru dengan memasukan judul, event, tahun akademik, kategori, kriteria pendaftar serta divisi tersedia.
+    c. Ketua Ormawa (Admin) dapat menerima seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
+    d. Ketua Ormawa (Admin) dapat mengisi data untuk SKPI dengan atribut learning hour, level kegiatan, tanggal kegiatan, soft skills, nama pembimbing, serta dokumen SK.
  
   2. READ
-    - Mahasiswa (User) dapat melihat riwayat pendaftaran kepanitiaan / kepengurusan yang telah dilakukan sebelumnya
-    - Mahasiswa (User) dapat melihat data diri dan status keanggotaan aktifnya
-    - Ketua Ormawa (Admin) dapat melihat pendaftar dari Recruitment yang telah ia buat sebelumnya.
-    - Ketua Ormawa (Admin) dapat melihat anggota dari Event yang telah selesai perekrutannya.
+    a. Mahasiswa (User) dapat melihat riwayat pendaftaran kepanitiaan / kepengurusan yang telah dilakukan sebelumnya
+    b. Mahasiswa (User) dapat melihat data diri dan status keanggotaan aktifnya
+    c. Ketua Ormawa (Admin) dapat melihat pendaftar dari Recruitment yang telah ia buat sebelumnya.
+    d. Ketua Ormawa (Admin) dapat melihat anggota dari Event yang telah selesai perekrutannya.
 
   3. UPDATE
-    - Ketua Ormawa (Admin) dapat memindahkan seorang pengurus dari divisi lamanya ke divisi yang lain serta memindahkan jabatannya.
-    - Ketua Ormawa (Admin) dapat menonaktifkan keanggotaan seorang pengurus.
+    a. Ketua Ormawa (Admin) dapat memindahkan seorang pengurus dari divisi lamanya ke divisi yang lain serta memindahkan jabatannya.
+    b. Ketua Ormawa (Admin) dapat menonaktifkan keanggotaan seorang pengurus.
 
   4. DELETE
-    - Ketua Ormawa (Admin) dapat menolak seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
+    a. Ketua Ormawa (Admin) dapat menolak seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
 
 
 ## Hasil implementasi
@@ -241,9 +241,8 @@ Penerapan pada sistem :
    <img src="public/images/SS Sistem/11.png"/>
   
 ## Link aplikasi (jika sudah di deploy)
-https://ipb-siawak.herokuapp.com/
+https://ipb-siawak.herokuapp.com/ dengan data dummy sebagai berikut:
 
-# Akun Dummy
 `Akun Ketua`
 - Email : arraz@apps.ipb.ac.id / rapi@apps.ipb.ac.id
 - Pass : 12345
