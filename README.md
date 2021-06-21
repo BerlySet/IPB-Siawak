@@ -13,37 +13,31 @@
       <th></th>
       <th>Nama</th>
       <th>NIM</th>
-      <th>Role</th>
     </tr>
     <tr>
       <td>1</td>
       <td>Berly Setiawan</td>
       <td>G64180044</td>
-      <td>Back-End Developer</td>
     </tr>
     <tr>
       <td>2</td>
       <td>Cristmas Anggario</td>
       <td>G64180058</td>
-      <td>Back-End Developer</td>
     </tr>
     <tr>
       <td>3</td>
       <td>Arrazzaq Adrian</td>
       <td>G64180109</td>
-      <td>Project Manager</td>
     </tr>
     <tr>
       <td>4</td>
       <td>Yudha Berliandi</td>
       <td>G64180110</td>
-      <td>Frontend Developer</td>
     </tr>
     <tr>
       <td>4</td>
       <td>Denny LIndawati Sinurat</td>
       <td>G64180103</td>
-      <td>UI/UX Designer</td>
     </tr>
   </table>
 </div>
@@ -106,6 +100,26 @@ Aplikasi yang dirancang adalah sistem aplikasi berbasis web. Web IPB Siawak memi
   * Encapsulation merupakan kombinasi data dan fungsionalitas dalam sebuah unit tunggal sebagai bentuk untuk menyembunyikan detail informasi.
   * Enkapsulation menekankan pada antarmuka suatu kelas, atau dengan kata lain bagaimana menggunakan objek kelas tertentu.
   * Proses enkapsulation memudahkan kita untuk menggunakan sebuah objek dari suatu kelas karena kita tidak perlu mengetahui segala hal secara rinci.
+```text
+...
+class UsersController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        
+        $user = Auth::user();
+        $chairman = Chairman::where('c_nim', $user->nim)->get(); //NIM diambil dari session auth pas login
+        $organization = Organization::where('id', $chairman[0]->c_idormawa)->get(); 
+
+        return view('profile', compact('user','organization','chairman'));
+    }
+...
+```
 
 ## Tipe desain pengembangan yang digunakan (Pattern/Anti Pattern)
 [`^ Kembali Keatas ^`](#)  
@@ -121,7 +135,7 @@ Penerapan pada sistem :
 2.	Model Mahasiswa : Pada model mahasiswa terdapat informasi mengenai nama, nim, hingga email mahasiswa pendaftar yang dibutuhkan ketika mahasiswa akan melakukan pendaftaran
 3.	Model Penerimaan Anggota : Pada model penerimaan anggota terdapat informasi mengenai penerimaan anggota yang dilakukan oleh ketua ormawa dan informasi pelamar
 4.	Model Jenis Pendaftaran (Kepanitiaan dan Ormawa) : Pada model jenis Pendaftaran terdapat format informasi yang akan diiisi oleh pendaftar/pelamar
-	
+
 
 #### View
    View mendefinisikan dengan tepat apa yang disajikan kepada pengguna. Biasanya, Controller meneruskan data ke setiap Tampilan. Tampilan juga mengumpulkan data dari pengguna. Di sini kami menggunakan bahasa pemrograman PHP (blade) untuk tampilan.
@@ -136,6 +150,7 @@ Penerapan di sistem :
     View pendaftaran ormawa/kepanitiaan menampilkan informasi terkait ormawa/kepanitiaan yang sedang oprec. 
 5.	Penerimaan anggota   
     View penerimaan anggota menampilkan informasi pendaftar yang akan diseleksi
+
 
 #### Controller 
    Controller merupakan bagian yang menjembatani model dan view. Controller berisi perintah-perintah yang berfungsi untuk memproses suatu data dan mengirimkannya ke halaman web.
@@ -183,17 +198,17 @@ Penerapan pada sistem :
         - Ketua Ormawa (Admin) dapat mengisi data untuk SKPI dengan atribut learning hour, level kegiatan, tanggal kegiatan, soft skills, nama pembimbing, serta dokumen SK.
  
   2. READ
-    a. Mahasiswa (User) dapat melihat riwayat pendaftaran kepanitiaan / kepengurusan yang telah dilakukan sebelumnya
-    b. Mahasiswa (User) dapat melihat data diri dan status keanggotaan aktifnya
-    c. Ketua Ormawa (Admin) dapat melihat pendaftar dari Recruitment yang telah ia buat sebelumnya.
-    d. Ketua Ormawa (Admin) dapat melihat anggota dari Event yang telah selesai perekrutannya.
+        - Mahasiswa (User) dapat melihat riwayat pendaftaran kepanitiaan / kepengurusan yang telah dilakukan sebelumnya
+        - Mahasiswa (User) dapat melihat data diri dan status keanggotaan aktifnya
+        - Ketua Ormawa (Admin) dapat melihat pendaftar dari Recruitment yang telah ia buat sebelumnya.
+        - Ketua Ormawa (Admin) dapat melihat anggota dari Event yang telah selesai perekrutannya.
 
   3. UPDATE
-    a. Ketua Ormawa (Admin) dapat memindahkan seorang pengurus dari divisi lamanya ke divisi yang lain serta memindahkan jabatannya.
-    b. Ketua Ormawa (Admin) dapat menonaktifkan keanggotaan seorang pengurus.
+        - Ketua Ormawa (Admin) dapat memindahkan seorang pengurus dari divisi lamanya ke divisi yang lain serta memindahkan jabatannya.
+        - Ketua Ormawa (Admin) dapat menonaktifkan keanggotaan seorang pengurus.
 
   4. DELETE
-    a. Ketua Ormawa (Admin) dapat menolak seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
+        - Ketua Ormawa (Admin) dapat menolak seorang pendaftar yang mendaftar pada perekrutan yang telah ia buat.
 
 
 ## Hasil implementasi
@@ -269,16 +284,16 @@ Pengembangan sistem SIAWAK ini bertujuan untuk memenuhi tugas akhir mata kuliah 
 
 | Nama                    | NIM           | Job Desk                     |
 | ----------------------- |:-------------:| :----------------------------|
-| Berly Setiawan          | G64180044     |    Sertifikat dan profil  |
-| Cristmas Anggario       | G64180058     |    Landing page , Keanggotaan dan Dashboard           |
+| Berly Setiawan          | G64180044     |    Sertifikat dan Profil  |
+| Cristmas Anggario       | G64180058     |    Landing page, Keanggotaan dan Dashboard           |
 | Arrazzaq Adrian         | G64180109     |    Open Recruitment       |
-| Yudha Berliandi         | G64180110     |    Dashbord dan Login     |
-| Denny Lindawati Sinurat | G64180103     |   Laporan dan Dokumentasi    |
+| Yudha Berliandi         | G64180110     |    Dashboard dan Login     |
+| Denny Lindawati Sinurat | G64180103     |   UI/UX, Laporan dan Dokumentasi    |
 
 ### Backend Developer
 
 | Nama                    | NIM           | Job Desk                     |
 | ----------------------- |:-------------:| :----------------------------|
-| Berly Setiawan          | G64180044     |  Sistem Database  |
+| Berly Setiawan          | G64180044     |  Sistem dan Desain Database  |
 
 <br>
