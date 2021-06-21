@@ -35,7 +35,7 @@
       <td>G64180110</td>
     </tr>
     <tr>
-      <td>4</td>
+      <td>5</td>
       <td>Denny LIndawati Sinurat</td>
       <td>G64180103</td>
     </tr>
