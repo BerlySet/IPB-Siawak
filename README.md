@@ -240,7 +240,18 @@ Penerapan pada sistem :
    <br>
    <img src="public/images/SS Sistem/11.png"/>
   
- * Link aplikasi (jika sudah di deploy)
+## Link aplikasi (jika sudah di deploy)
+https://ipb-siawak.herokuapp.com/
+
+# Akun Dummy
+`Akun Ketua`
+- Email : arraz@apps.ipb.ac.id / rapi@apps.ipb.ac.id
+- Pass : 12345
+
+`Akun Mahasiswa`
+- Email : berly@apps.ipb.ac.id / ebuy@apps.ipb.ac.id
+- Pass : 12345
+
 
 ## Saran untuk pengembangan selanjutnya
 [`^ Kembali Keatas ^`](#)      
@@ -272,34 +283,3 @@ Pengembangan sistem SIAWAK ini bertujuan untuk memenuhi tugas akhir mata kuliah 
 | Berly Setiawan          | G64180044     |  Sistem Database  |
 
 <br>
-
-
-
-# Akun Dummy
-`Akun Ketua`
-Email : arraz@apps.ipb.ac.id / rapi@apps.ipb.ac.id
-Pass : 12345
-
-`Akun Mahasiswa`
-Email : berly@apps.ipb.ac.id / ebuy@apps.ipb.ac.id
-Pass : 12345
-
-## Step Before Coding
-- Clone your project `git clone https://github.com/BerlySet/PSBO.git`
-- Go to the folder application using `cd` command on your cmd or terminal
-- Run `composer install` on your cmd or terminal
-- Copy .env.example file to .env on the root folder. You can type `copy .env.example .env` if using command prompt Windows or `cp .env.example .env` if using terminal, Ubuntu
-- Open `phpMyAdmin` and create database name `ipb-siawak`
-- Open your .env file and change the database name `(DB_DATABASE)` to `ipb-siawak`, username `(DB_USERNAME)` and password `(DB_PASSWORD)` field correspond to your configuration. By default, the username is root and you can leave the password field empty. (This is for Xampp) By default, the username is root and password is also root. (This is for Lamp or Mamp)
-- Run `php artisan key:generate`
-- Run `php artisan migrate`
-- Run `php artisan db:seed`
-- Run `php artisan serve`
-
-## Step If Database or Migration or Seeder Changed
-- Make sure XAMPP apache and MySQL active
-- Run `php artisan migrate:fresh`, Your table in database will be regenerated
-- Run `php artisan db:seed`
-
-
-
